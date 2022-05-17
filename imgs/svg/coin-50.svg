@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="82" viewBox="0 0 82 82">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.757" y1="0.973" x2="0.185" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2b6b2f"/>
+      <stop offset="1" stop-color="#56c84a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.734" y1="1" x2="0.222" y2="0.071" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.186" cy="0.159" r="1.086" gradientTransform="translate(0.182 -0.086) rotate(48.764)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.511" stop-color="#ccc"/>
+      <stop offset="1" stop-color="gray"/>
+    </radialGradient>
+    <clipPath id="clip-coin-50">
+      <rect width="82" height="82"/>
+    </clipPath>
+  </defs>
+  <g id="coin-50" clip-path="url(#clip-coin-50)">
+    <g id="Grupo_233" data-name="Grupo 233" transform="translate(-1463 -769)">
+      <g id="Grupo_16" data-name="Grupo 16" transform="translate(110 -77)">
+        <g id="Grupo_12" data-name="Grupo 12" transform="translate(-51 1)">
+          <circle id="Elipse_76" data-name="Elipse 76" cx="39" cy="39" r="39" transform="translate(1406 847)" fill="url(#linear-gradient)"/>
+          <g id="Elipse_77" data-name="Elipse 77" transform="translate(1406 847)" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="24" opacity="0.34">
+            <circle cx="39" cy="39" r="39" stroke="none"/>
+            <circle cx="39" cy="39" r="34" fill="none"/>
+          </g>
+          <circle id="Elipse_79" data-name="Elipse 79" cx="23" cy="23" r="23" transform="translate(1422 863)" opacity="0.22" fill="url(#linear-gradient-2)"/>
+          <circle id="Elipse_80" data-name="Elipse 80" cx="20" cy="20" r="20" transform="translate(1425 866)" fill="url(#radial-gradient)"/>
+          <g id="Elipse_78" data-name="Elipse 78" transform="translate(1404 845)" fill="none" stroke="#000" stroke-width="5" opacity="0.16">
+            <circle cx="41" cy="41" r="41" stroke="none"/>
+            <circle cx="41" cy="41" r="38.5" fill="none"/>
+          </g>
+        </g>
+        <text id="_50" data-name="50" transform="translate(1394.5 894.5)" fill="none" stroke="#347e35" stroke-width="2" font-size="17" font-family="SegoeUI, Segoe UI" letter-spacing="0.104em"><tspan x="-10.048" y="0">50</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

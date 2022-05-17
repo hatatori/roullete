@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="82" viewBox="0 0 82 82">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.757" y1="0.973" x2="0.185" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#341f97"/>
+      <stop offset="1" stop-color="#5f27cd"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.734" y1="1" x2="0.222" y2="0.071" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.186" cy="0.159" r="1.086" gradientTransform="translate(0.182 -0.086) rotate(48.764)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.511" stop-color="#ccc"/>
+      <stop offset="1" stop-color="gray"/>
+    </radialGradient>
+    <clipPath id="clip-coin-5">
+      <rect width="82" height="82"/>
+    </clipPath>
+  </defs>
+  <g id="coin-5" clip-path="url(#clip-coin-5)">
+    <g id="Grupo_248" data-name="Grupo 248" transform="translate(-115 -133)">
+      <circle id="Elipse_186" data-name="Elipse 186" cx="39" cy="39" r="39" transform="translate(117 135)" fill="url(#linear-gradient)"/>
+      <g id="Elipse_187" data-name="Elipse 187" transform="translate(117 135)" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="24" opacity="0.34">
+        <circle cx="39" cy="39" r="39" stroke="none"/>
+        <circle cx="39" cy="39" r="34" fill="none"/>
+      </g>
+      <circle id="Elipse_188" data-name="Elipse 188" cx="23" cy="23" r="23" transform="translate(133 151)" opacity="0.22" fill="url(#linear-gradient-2)"/>
+      <circle id="Elipse_189" data-name="Elipse 189" cx="20" cy="20" r="20" transform="translate(136 154)" fill="url(#radial-gradient)"/>
+      <g id="Elipse_190" data-name="Elipse 190" transform="translate(115 133)" fill="none" stroke="#000" stroke-width="5" opacity="0.16">
+        <circle cx="41" cy="41" r="41" stroke="none"/>
+        <circle cx="41" cy="41" r="38.5" fill="none"/>
+      </g>
+      <text id="_5" data-name="5" transform="translate(156.5 180.5)" fill="#341f97" stroke="#341f97" stroke-width="2" font-size="17" font-family="SegoeUI, Segoe UI" letter-spacing="0.104em"><tspan x="-4.582" y="0">5</tspan></text>
+    </g>
+  </g>
+</svg>

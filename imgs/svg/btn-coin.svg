@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.734" y1="1" x2="0.222" y2="0.071" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <clipPath id="clip-btn-coin">
+      <rect width="116" height="116"/>
+    </clipPath>
+  </defs>
+  <g id="btn-coin" clip-path="url(#clip-btn-coin)">
+    <g id="Grupo_136" data-name="Grupo 136" transform="translate(-807 -1268)">
+      <g id="Grupo_122" data-name="Grupo 122" transform="translate(807.417 1267.43)">
+        <circle id="Elipse_157" data-name="Elipse 157" cx="56.5" cy="56.5" r="56.5" transform="translate(1.582 2.57)" fill="#222"/>
+        <g id="Elipse_158" data-name="Elipse 158" transform="translate(1.582 2.57)" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="24" opacity="0.34">
+          <circle cx="56.5" cy="56.5" r="56.5" stroke="none"/>
+          <circle cx="56.5" cy="56.5" r="51.5" fill="none"/>
+        </g>
+        <ellipse id="Elipse_160" data-name="Elipse 160" cx="33.5" cy="32.5" rx="33.5" ry="32.5" transform="translate(24.582 26.57)" opacity="0.22" fill="url(#linear-gradient)"/>
+        <circle id="Elipse_161" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.582 30.57)" fill="none"/>
+        <g id="Elipse_159" data-name="Elipse 159" transform="translate(-0.418 -0.43)" fill="none" stroke="#000" stroke-width="5" opacity="0.16">
+          <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+          <ellipse cx="58" cy="59" rx="55.5" ry="56.5" fill="none"/>
+        </g>
+        <text id="_" data-name="$" transform="translate(57.582 74.57)" fill="rgba(151,151,151,0.5)" font-size="38" font-family="SegoeUI, Segoe UI" letter-spacing="0.104em"><tspan x="-10.242" y="0">$</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

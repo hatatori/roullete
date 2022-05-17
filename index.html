@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/classes.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="center-full">
+        <div class="screen">
+            <!-- roleta -->
+            <!-- <div class="fixed w-400 h-400 o-hidden bg-red"> -->
+            <div class="fixed bottom h-full w-full j-center i-center z-3 none" id="roullete_group">
+                <div class="w-500 m-auto max-w-full h-500 max-h-full relative flex j-center i-center">
+                    <img class="absolute w-full h-full" src='imgs/svg/roleta-0.svg' style="transform: translateY(-100px)"> <!-- parte de trás -->
+                    <img class="absolute w-full max-w-full" src='imgs/png/roullete-1.png'> <!-- roleta fora -->
+                    <div class=" w-full h-full flex j-center i-center relative" id="div_roullete">
+                        <img class="w-full absolute" src='imgs/png/roullete-2.png' id="img_roleta_numbers">
+                        <img class="absolute m-auto left right bottom top fall" width="15px" class="z-3" id="img_ball" src="imgs/svg/ball.svg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- comeco mesa -->
+
+            <div style="margin:auto">
+                <div class="grid grid-col-5 max-w-90p gap-0 transition" style="width: 400px; height: 90vh; " id="div_table" >
+
+                    <div n="dozen1" onmouseout="render.blinkOut()" onmouseover="render.blink('dozen1')" class="vert square cs-2 rs-2 re-5">1 st 12</div>
+                    <div n="to18" onmouseout="render.blinkOut()" onmouseover="render.blink('to18')" class="vert square cs-1 rs-2 re-3">1 to 18</div>
+                    <div n="even" onmouseout="render.blinkOut()" onmouseover="render.blink('even')" class="vert square cs-1 rs-4 re-5">EVEN</div>
+                    <div n="dozen2" onmouseout="render.blinkOut()" onmouseover="render.blink('dozen2')" class="vert square cs-2 rs-6 re-9">2 st 12</div>
+                    <div n="black" onmouseout="render.blinkOut()" onmouseover="render.blink('black')" class="vert square cs-1 rs-8 re-9"> <img width="30px" src="imgs/svg/triangle-black.svg"> </div>
+                    <div n="red" onmouseout="render.blinkOut()" onmouseover="render.blink('red')" class="vert square cs-1 rs-6 re-7"> <img width="30px" src="imgs/svg/triangle-red.svg"> </div>
+                    <div n="dozen3" onmouseout="render.blinkOut()" onmouseover="render.blink('dozen3')" class="vert square cs-2 rs-10 re-13">3 st 12</div>
+                    <div n="odd" onmouseout="render.blinkOut()" onmouseover="render.blink('odd')" class="vert square cs-1 rs-10 re-11">ODD</div>
+                    <div n="to36" onmouseout="render.blinkOut()" onmouseover="render.blink('to36')" class="vert square cs-1 rs-12 re-13">19 to 36</div>
+                    
+                    <div n="0" class="square green cs-3 ce-6 relative">0</div>
+                    <div to18   dozen1  col1    red       odd      n="1"     class="odd square cs-3">1</div>
+                    <div to18   dozen1  col2    black     even     n="2"     class="even square">2</div>
+                    <div to18   dozen1  col3    red       odd      n="3"     class="odd square">3</div>
+                    <div to18   dozen1  col1    black     even     n="4"     class="even square">4</div>
+                    <div to18   dozen1  col2    red       odd      n="5"     class="odd square">5</div>
+                    <div to18   dozen1  col3    black     even     n="6"     class="even square">6</div>
+                    <div to18   dozen1  col1    red       odd      n="7"     class="odd square">7</div>
+                    <div to18   dozen1  col2    black     even     n="8"     class="even square">8</div>
+                    <div to18   dozen1  col3    red       odd      n="9"     class="odd square">9</div>
+                    <div to18   dozen1  col1    black     even     n="10"    class="even square">10</div>
+                    <div to18   dozen1  col2    red       odd      n="11"    class="odd square">11</div>
+                    <div to18   dozen1  col3    black     even     n="12"    class="even square">12</div>
+                    <div to18   dozen2  col1    red       odd      n="13"    class="odd square">13</div>
+                    <div to18   dozen2  col2    black     even     n="14"    class="even square">14</div>
+                    <div to18   dozen2  col3    red       odd      n="15"    class="odd square">15</div>
+                    <div to18   dozen2  col1    black     even     n="16"    class="even square">16</div>
+                    <div to18   dozen2  col2    red       odd      n="17"    class="odd square">17</div>
+                    <div to18   dozen2  col3    black     even     n="18"    class="even square">18</div>
+                    <div to36   dozen2  col1    red       odd      n="19"    class="odd square">19</div>
+                    <div to36   dozen2  col2    black     even     n="20"    class="even square">20</div>
+                    <div to36   dozen2  col3    red       odd      n="21"    class="odd square">21</div>
+                    <div to36   dozen2  col1    black     even     n="22"    class="even square">22</div>
+                    <div to36   dozen2  col2    red       odd      n="23"    class="odd square">23</div>
+                    <div to36   dozen2  col3    black     even     n="24"    class="even square">24</div>
+                    <div to36   dozen3  col1    red       odd      n="25"    class="odd square">25</div>
+                    <div to36   dozen3  col2    black     even     n="26"    class="even square">26</div>
+                    <div to36   dozen3  col3    red       odd      n="27"    class="odd square">27</div>
+                    <div to36   dozen3  col1    black     even     n="28"    class="even square">28</div>
+                    <div to36   dozen3  col2    red       odd      n="29"    class="odd square">29</div>
+                    <div to36   dozen3  col3    black     even     n="30"    class="even square">30</div>
+                    <div to36   dozen3  col1    red       odd      n="31"    class="odd square">31</div>
+                    <div to36   dozen3  col2    black     even     n="32"    class="even square">32</div>
+                    <div to36   dozen3  col3    red       odd      n="33"    class="odd square">33</div>
+                    <div to36   dozen3  col1    black     even     n="34"    class="even square">34</div>
+                    <div to36   dozen3  col2    red       odd      n="35"    class="odd square">35</div>
+                    <div to36   dozen3  col3    black     even     n="36"    class="even square">36</div>
+
+                    <div n="col1" onmouseout="render.blinkOut()" onmouseover="render.blink('col1')" class="square cs-3">2to18</div>
+                    <div n="col2" onmouseout="render.blinkOut()" onmouseover="render.blink('col2')" class="square">2to18</div>
+                    <div n="col3" onmouseout="render.blinkOut()" onmouseover="render.blink('col3')" class="square">2to18</div>
+
+                </div>
+            </div>
+            
+
+            <!-- message win -->
+            <!-- 
+            <div class="alert fade-in">
+                <div class="alert-in zoom-in">
+                    <p>Ganhou</p>
+                    <h1>U$ 1000,00</h1>
+                </div>
+            </div>
+            -->
+
+            <footer id="footer" class="footer fixed bottom transition ty100 z-2">
+                
+                <!-- buttons -->
+                <div class="footer-line j-around flex">
+                    <div class="zoom" onclick="render.coinRemoveLast()">
+                        <img src="imgs/svg/btn-back.svg" width="50px">    
+                        <p class="font-style-1">UNDO</p>
+                    </div>
+                    <div class="zoom" onclick="render.coinRemoveAll()">
+                        <img src="imgs/svg/btn-clean.svg" width="50px">    
+                        <p class="font-style-1">CLEAR</p>
+                    </div>
+                    <div class="">
+                        <div id="div_chosen" class="chosen chosen-red">36</div>
+                        <p class="font-style-1" style="margin: 5px 0px">ESCOLHA</p>
+                    </div>
+                    <div class="zoom" onclick="render.play(parseInt(Math.random()*36))">
+                        <img src="imgs/svg/btn-play.svg" width="50px">    
+                        <p class="font-style-1">PLAY</p>
+                    </div>
+                    <div class="zoom" onclick="render.menuHide()">
+                        <img src="imgs/svg/btn-close.svg" width="50px">    
+                        <p class="font-style-1">CLOSE</p>
+                    </div>
+                </div>
+
+                <!-- coins choices -->
+
+                <div class="footer-line">
+                    <div class="flex j-center m-auto gap-1 flex-wrap">
+                        <img draggable="false" id="coin1"    onclick="Audios.select2(); render.coinAdd(1)" class="zoom" style="width: 50px;" src="imgs/svg/coin-1.svg">
+                        <img draggable="false" id="coin5"    onclick="Audios.select2(); render.coinAdd(5)" class="zoom" style="width: 50px;" src="imgs/svg/coin-5.svg">
+                        <img draggable="false" id="coin10"   onclick="Audios.select2(); render.coinAdd(10)" class="zoom" style="width: 50px;" src="imgs/svg/coin-10.svg">
+                        <img draggable="false" id="coin25"   onclick="Audios.select2(); render.coinAdd(25)" class="zoom" style="width: 50px;" src="imgs/svg/coin-25.svg">
+                        <img draggable="false" id="coin50"   onclick="Audios.select2(); render.coinAdd(50)" class="zoom" style="width: 50px;" src="imgs/svg/coin-50.svg">
+                        <img draggable="false" id="coin100"  onclick="Audios.select2(); render.coinAdd(100)" class="zoom" style="width: 50px;" src="imgs/svg/coin-100.svg">
+                        <img draggable="false" id="coin500"  onclick="Audios.select2(); render.coinAdd(500)" class="zoom" style="width: 50px;" src="imgs/svg/coin-500.svg">
+                        <img draggable="false" id="coin1000" onclick="Audios.select2(); render.coinAdd(1000)" class="zoom" style="width: 50px;" src="imgs/svg/coin-1000.svg">
+                    </div>
+                </div>
+
+                 <!-- coins receive -->
+                <div id="coins_left" class="flex o-hidden" style="height: 100px; padding: 1em">
+                    <!-- <div id="coins_left" class="flex bg-gray w-full" style="height: 100px; padding: 1em; position: fixed;"> -->
+                    <img id="coin0" style="width: 50px;" src="imgs/svg/coin-0.svg">
+                </div>
+
+              
+                <!-- footer -->
+                <div class="footer-end">
+                    <div class="left">
+                        <p class="t-blue-1">SEU SALDO</p>
+                        <h1 id="div_balance" class="t-gray-1">U$ 500,00</h1>
+                    </div>
+                    <div class="right">
+                        <p class="t-blue-1">APOSTA</p>
+                        <h1 id="div_bet" class="t-gray-1">U$ 0,00</h1>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <img onclick="render.menu()" id="btn_float_menu" src='imgs/svg/btn-menu.svg'>
+
+    <script src="js/Objects.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Render.js"></script>
+    <script src="js/Users.js"></script>
+    <script src="js/Start.js"></script>
+
+    <script src="games.js"></script>
+
+</body>
+</html>

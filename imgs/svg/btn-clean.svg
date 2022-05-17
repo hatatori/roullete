@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <clipPath id="clip-btn-clean">
+      <rect width="116" height="116"/>
+    </clipPath>
+  </defs>
+  <g id="btn-clean" clip-path="url(#clip-btn-clean)">
+    <g id="Grupo_134" data-name="Grupo 134" transform="translate(-366 -1268)">
+      <g id="Grupo_125" data-name="Grupo 125" transform="translate(365.901 1267.43)">
+        <ellipse id="Elipse_157" data-name="Elipse 157" cx="56" cy="56.5" rx="56" ry="56.5" transform="translate(2.099 2.57)" fill="#222"/>
+        <circle id="Elipse_161" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.099 30.57)" fill="none"/>
+        <g id="Elipse_159" data-name="Elipse 159" transform="translate(0.099 -0.43)" fill="none" stroke="#000" stroke-width="10" opacity="0.16">
+          <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+          <ellipse cx="58" cy="59" rx="53" ry="54" fill="none"/>
+        </g>
+      </g>
+    </g>
+    <g id="Grupo_288" data-name="Grupo 288" transform="translate(4.178 0.178)">
+      <g id="Grupo_287" data-name="Grupo 287" transform="translate(-3303.773 -1342.183) rotate(-45)">
+        <g id="Retângulo_290" data-name="Retângulo 290" transform="translate(1362 3351)" fill="none" stroke="#707070" stroke-width="5">
+          <rect width="44.45" height="25.352" rx="4" stroke="none"/>
+          <rect x="2.5" y="2.5" width="39.45" height="20.352" rx="1.5" fill="none"/>
+        </g>
+        <rect id="Retângulo_291" data-name="Retângulo 291" width="19.588" height="20.107" transform="translate(1383.848 3353.623)" fill="#707070"/>
+      </g>
+      <line id="Linha_3" data-name="Linha 3" x2="32" transform="translate(46.5 78.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="5" stroke-dasharray="6"/>
+    </g>
+  </g>
+</svg>

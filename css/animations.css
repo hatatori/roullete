@@ -91,7 +91,7 @@
 /* rotate clock */
 
 
-.rotate{animation: rotate 8s infinite linear;}
+.rotate{animation: rotate 7s infinite linear;}
 .hover\:rotate-180:hover{transform: rotate(180deg);}
 
 @keyframes rotate{
@@ -101,17 +101,17 @@
 
 .wave{animation: wave 0.8s forwards;}
 @keyframes wave{
-    0%{transform:  translateY(0px) translateX(  5px) ;  }
-    10%{transform: translateY(0px) translateX( -5px) ;  }
-    20%{transform: translateY(0px) translateX(  4px) ;  }
-    30%{transform: translateY(0px) translateX( -4px) ;  }
-    40%{transform: translateY(0px) translateX(  3px) ;  }
-    50%{transform: translateY(0px) translateX( -3px) ;  }
-    60%{transform: translateY(0px) translateX(  2px) ;  }
-    70%{transform: translateY(0px) translateX( -2px) ;  }
-    80%{transform: translateY(0px) translateX(  1px) ;  }
-    90%{transform: translateY(0px) translateX( -1px) ;  }
-   100%{transform: translateY(0px) translateX(  0px) ; }
+     0%{transform: translateY( 9px) translateX( 0px) }
+    10%{transform: translateY(-9px) translateX(-5px) }
+    20%{transform: translateY( 8px) translateX( 0px) }
+    30%{transform: translateY(-8px) translateX(-4px) }
+    40%{transform: translateY( 5px) translateX( 0px)  }
+    50%{transform: translateY(-5px) translateX(-3px)  }
+    60%{transform: translateY( 4px) translateX( 0px)  }
+    70%{transform: translateY(-4px) translateX(-2px)  }
+    80%{transform: translateY( 3px) translateX( 0px)  }
+    90%{transform: translateY(-3px) translateX(-1px)  }
+   100%{transform: translateY( 0px) translateX( 0px)  }
 }
 
 .ty0{transform: translateY(0%);}

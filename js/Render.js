@@ -68,10 +68,10 @@ class Render{
         this.showRoullete()
         this.rotateRandomPosition()
 
-        Ball.start()
+        Ball.go()
         Roullete.choice(n)
         Roullete.value = n
-        Audios.roll()
+        // Audios.roll()
 
         setTimeout(()=>{
             this.message_information(n)

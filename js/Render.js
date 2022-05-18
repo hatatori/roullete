@@ -109,7 +109,7 @@ class Render{
             }
             user.setBet(0)
         // roullete bye
-        },7*1000)
+        },8*1000)
     }
 
     play(n){

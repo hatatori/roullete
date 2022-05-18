@@ -66,7 +66,6 @@ let Ball = {
             this.el.classList.add('wave')
             setTimeout(()=>this.el.classList.remove('wave'),1000)
         }
-        console.log(this.velocity)
 
     },
     
@@ -136,16 +135,13 @@ let Roullete = {
     },
 
     choice(n){
+        
         this.num = this.order.indexOf(n) //2
-        // this.num = n
+        this.grau = this.num * 9.73
+        
         // this.grau = 0
-        // this.velocity = 2 * 38 * this.factor + this.num * this.factor
-        // this.velocity = this.factor + this.num
+        // this.velocity = 6.58 * 2 + this.factor * this.num
         // this.aceleration = 1
-
-        this.grau = 0
-        this.velocity = 6.58 * 2 + this.factor * this.num
-        this.aceleration = 1
 
 
     },

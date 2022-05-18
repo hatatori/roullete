@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'poker';
     src: url('../fonts/poker.otf');
@@ -18,7 +19,8 @@ body{
 
     font-family: 'poker';
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("imgs/jpg/back5.jpg");
+    /* background-image: url("imgs/jpg/back5.jpg"); */
+    /* background: url("imgs/jpg/back.jpg"); */
     background-size: cover;
 }
 
@@ -35,12 +37,13 @@ body{
     max-width: 100%;
     height: 1920px;
     max-height: 100%;
-    background-color: #e74c3c;
+    /* background-color: #e74c3c; */
     background-image: linear-gradient(90deg, #022813 , #356825);
     resize: both;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* background-image: url("../imgs/jpg/back.jpg"); */
 }
 
 /* alert */
@@ -116,9 +119,10 @@ body{
     padding: 22%;
 }
 
-.roullete .div_ball #img_ball{
-    max-width : 30px;
-    max-height: 30px;
+#img_ball{
+    /* max-width : 30px; */
+    /* max-height: 30px; */
+    /* box-shadow: 0px 0px 0px 5px white; */
 }
 
 /* table */
@@ -233,3 +237,40 @@ g:hover > rect{
     border-top-color: transparent;
 
 }
+
+.historic{
+    width: 310px;
+    max-width: 100%;
+    border-radius: 30px;
+    display: inline-flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    margin: auto;
+    background: #356825;
+    overflow: hidden;
+    background-color: #531a00;
+    padding:10px;
+    background: url('../imgs/jpg/back_wood_2.jpg');
+    box-shadow: 0px 0px 5px black;
+    transition: 0.5s;
+}
+
+.historic div{
+    border-radius: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50px;
+    flex:none;
+    box-shadow: 0px 0px 0px 5px white;
+}
+
+.historic div:first-child{
+    animation: to-50 0.5s, zoom-out 0.5s;   
+}
+
+.historic .ball{color: #00000055; color: white;}
+.historic .ball-red{background: linear-gradient(#a90015, #6d000a)}
+.historic .ball-black{background: linear-gradient(#383934, #141311)}
+

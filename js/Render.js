@@ -64,6 +64,22 @@ class Render{
         all.map(e=>e.style.removeProperty('opacity'))
     }
 
+    historicAdd(n){
+        // <div class="ball ball-red">3</div>
+        let div = document.createElement('div')
+        div.innerHTML = `<div class="ball ball-red">${n}</div>`
+        console.log(div)
+        
+        // historic.appendChild(div.children[0])
+        
+        // historic.appendChild(div.children[0])
+        historic.style.height = '70px'
+        historic.style.transition = '0.5s'
+        historic.style.padding = "10px"
+        historic.insertBefore(div, historic.firstChild);
+
+    }
+
     roll(n){
         this.showRoullete()
         this.rotateRandomPosition()
@@ -74,7 +90,9 @@ class Render{
         // Audios.roll()
 
         setTimeout(()=>{
-            this.message_information(n)
+            // this.message_information(n)
+            console.log(n)
+            this.historicAdd(n)
         },5000)
 
         setTimeout(()=>{
@@ -83,16 +101,15 @@ class Render{
             this.coinClean()
             this.menuHide()
 
+
             if(Roullete.value == user.choice || game.choice[user.group].includes(Roullete.value)){
                 user.setBalance( user.balance + user.bet + user.bet * game.porcentage[user.group])
                 render.message_win("Ganhou", this.toDollar(user.bet * game.porcentage[user.group]))
                 user.setBet(0)
             }
-            
             user.setBet(0)
-
-
-        },7000)
+        // roullete bye
+        },7*1000)
     }
 
     play(n){

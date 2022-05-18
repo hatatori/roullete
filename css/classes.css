@@ -363,3 +363,6 @@
 
 .circle{border-radius: 100%; }
 .circle-o{border-radius: 100%; overflow: hidden;}
+
+.zoom{transform: scale(1.2);}
+/* .zoom-first:first-child{transform: scale(1.2);} */

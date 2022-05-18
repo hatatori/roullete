@@ -19,9 +19,10 @@ body{
 
     font-family: 'poker';
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-image: url("imgs/jpg/back5.jpg"); */
+    /* background-image: url("../imgs/jpg/back_table.jpg"); */
     /* background: url("imgs/jpg/back.jpg"); */
-    background-size: cover;
+    /* background-size: cover; */
+
 }
 
 .center-full{
@@ -44,6 +45,8 @@ body{
     flex-direction: column;
     justify-content: space-between;
     /* background-image: url("../imgs/jpg/back.jpg"); */
+    /* background-image: url("../imgs/jpg/back_table.jpg"); */
+    
 }
 
 /* alert */
@@ -119,11 +122,11 @@ body{
     padding: 22%;
 }
 
-#img_ball{
+/* #img_ball{ */
     /* max-width : 30px; */
     /* max-height: 30px; */
     /* box-shadow: 0px 0px 0px 5px white; */
-}
+/* } */
 
 /* table */
 
@@ -147,9 +150,11 @@ body{
     overflow: hidden;
 }
 
+div[red]{ background-color: #9b1608 }
+div[black]{ background-color: #000000 }
+
 .odd {background: linear-gradient(45deg, #d61d09, #9b1608)}
 .even {background: linear-gradient(45deg, #000000, #111111)}
-
 
 .red{background: #d41f0e}
 .green{background: #009d42}
@@ -217,27 +222,6 @@ g:hover > rect{
 /* vertical */
 .vert{writing-mode: vertical-rl;}
 
-.triangle{
-    position: relative;
-}
-
-.triangle::before{
-    content:"";
-    position: absolute;
-    bottom: 100%;
-    left: 0px;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    
-    border: solid 2px black;
-
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-top-color: transparent;
-
-}
-
 .historic{
     width: 310px;
     max-width: 100%;
@@ -263,11 +247,18 @@ g:hover > rect{
     display: flex;
     width: 50px;
     flex:none;
-    box-shadow: 0px 0px 0px 5px white;
+    /* box-shadow: 0px 0px 0px 5px white; */
 }
 
 .historic div:first-child{
     animation: to-50 0.5s, zoom-out 0.5s;   
+    box-shadow: 0px 0px 0px 5px white;
+}
+
+.historic div:nth-child(n+2){
+    transform: scale(0.8);
+    opacity: 0.5;
+    
 }
 
 .historic .ball{color: #00000055; color: white;}

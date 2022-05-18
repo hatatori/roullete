@@ -53,7 +53,7 @@ class Render{
 
     blink(group_name){
         let all = [...div_table.children]
-        all.map(e=>e.style.opacity = 0.1)
+        all.map(e=>e.style.opacity = 0.2)
         let reds = [...div_table.querySelectorAll('['+group_name+']')]
         reds.map(e=>e.style.removeProperty('opacity'))
     }
@@ -65,19 +65,15 @@ class Render{
     }
 
     historicAdd(n){
-        // <div class="ball ball-red">3</div>
         let div = document.createElement('div')
-        div.innerHTML = `<div class="ball ball-red">${n}</div>`
-        console.log(div)
+        let classdiv = n%2 == 0 ? 'ball-black' : 'ball-red'
+
+        div.innerHTML = `<div class="ball ${classdiv}">${n}</div>`
         
-        // historic.appendChild(div.children[0])
-        
-        // historic.appendChild(div.children[0])
         historic.style.height = '70px'
         historic.style.transition = '0.5s'
         historic.style.padding = "10px"
         historic.insertBefore(div, historic.firstChild);
-
     }
 
     roll(n){
@@ -249,19 +245,13 @@ class Render{
     }
 
     choiceBet(n){
+        n = parseInt(n)
+        let color_class = ""
 
-        let color_class = "chosen chosen-red"
-
-        if(n%2 == 0) color_class = "chosen chosen-black"
-        if(n   == 0) color_class = "chosen chosen-green"
-
-        if(isNaN(Number(n)))
-            color_class = "chosen chosen-green";
+        color_class = "chosen chosen-"+game.getColorNum(n)
 
         div_chosen.classList.value = color_class
-
         div_chosen.innerHTML = n
-        // alert('ok')
     }
 
     toDollar(value){

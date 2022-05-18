@@ -97,6 +97,18 @@
 
 
 .rotate{animation: rotate 7s infinite linear;}
+.rotate-1{animation: rotate 1s infinite linear;}
+.rotate-1{animation: rotate 1s infinite linear;}
+.rotate-2{animation: rotate 2s infinite linear;}
+.rotate-3{animation: rotate 3s infinite linear;}
+.rotate-4{animation: rotate 4s infinite linear;}
+.rotate-5{animation: rotate 5s infinite linear;}
+.rotate-6{animation: rotate 6s infinite linear;}
+.rotate-7{animation: rotate 7s infinite linear;}
+.rotate-8{animation: rotate 8s infinite linear;}
+.rotate-9{animation: rotate 9s infinite linear;}
+
+
 .hover\:rotate-180:hover{transform: rotate(180deg);}
 
 @keyframes rotate{
@@ -104,7 +116,7 @@
     100%{transform: rotate(360deg);}
 }
 
-.wave{animation: wave 0.5s forwards;}
+.wave{animation: wave 0.7s forwards;}
 
 @keyframes wave{
      0%{transform: translateY( 0px)  }

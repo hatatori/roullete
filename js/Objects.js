@@ -139,10 +139,26 @@ let Roullete = {
         this.num = this.order.indexOf(n) //2
         this.grau = this.num * 9.73
         
-        // this.grau = 0
-        // this.velocity = 6.58 * 2 + this.factor * this.num
+        // this.grau = this.num
+        // this.velocity = 3.29
         // this.aceleration = 1
 
+        // Roullete.choice(0)
+        this.grau -= 180
+        this.velocity = 3.29
+        this.aceleration = 1
+
+
+
+
+
+        // Roullete.grau = 0
+        // Roullete.velocity = 6.58 * 2 + this.factor * this.num
+        // Roullete.aceleration = 1
+
+        // this.grau = 0
+        // this.velocity = 6.58
+        // this.aceleration = 1
 
     },
 

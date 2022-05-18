@@ -1,7 +1,7 @@
 let Ball = {
     velocity: 10,
     el: img_ball,
-    r:1.35,
+    r: 1.35,
     aceleration: 1,
     degree: 0,
     factor: 0.005,
@@ -13,12 +13,6 @@ let Ball = {
 
     deg(n){
 
-        // this.r = 1.35
-
-        // let dx = Math.sin(this.velocity)*Roullete.roulette_img.width/this.r
-        // let dy = Math.cos(this.velocity)*Roullete.roulette_img.width/this.r*-1
-        // n = n
-
         let dx = Math.cos(n) * Roullete.roulette_img.width/this.r
         let dy = Math.sin(n) * Roullete.roulette_img.width/this.r
 
@@ -27,33 +21,52 @@ let Ball = {
 
     spin(){
 
-        if(this.r < 1.6)
+        if(this.r < 1.6){
             this.r += 0.001
-        else
+        }else{
             this.r += 0.01
+            this.factor = 0.001
+
+            // this.el.classList.add('wave')
+            // setTimeout(()=>this.el.classList.remove('wave'),500)
+
+        }
 
         if(this.r >= 2)
             this.r = 2
 
-        if(this.velocity > 0){
-            this.aceleration -= this.factor
-            this.velocity -= this.aceleration
-        }
+        // this.aceleration -= 0.1
+        // this.velocity += this.aceleration
+
+        // if(this.velocity > 0){
+            // this.aceleration -= this.factor
+            // this.velocity *= this.aceleration
+        // }
+
+        this.aceleration -= this.factor
+        
+        
+
+        if(this.aceleration < 0)
+            this.aceleration = 0
+        
+        this.velocity *= this.aceleration
 
         if(this.velocity < 0)
             this.velocity = 0
 
-        this.degree -=  this.velocity
 
-        this.deg(this.degree/300)
+        this.degree -= this.velocity
+
+        this.deg(this.degree/this.dec)
         
         // Audio.roll()
         
-        
-        if(this.velocity.toFixed(1) == 3 && !this.el.classList.contains('wave')){
+        if(this.velocity.toFixed(1) == 0.9 && !this.el.classList.contains('wave')){
             this.el.classList.add('wave')
             setTimeout(()=>this.el.classList.remove('wave'),1000)
         }
+        console.log(this.velocity)
 
     },
     
@@ -65,18 +78,26 @@ let Ball = {
     go(){
 
         this.r = 1.35
+
         // this.velocity = 5
 
         this.deg(0)
         this.degree = 0
-        this.factor = 0.001
-        this.velocity = 99.1
-        this.aceleration = 0.5
+        this.factor = 0.00001
+        this.dec = 10
+        this.aceleration = 1
+        this.velocity = 1.3045
 
         Audios.roll()
 
+    },
+
+    float(n){
+        return parseFloat(n.toFixed(2))
     }
 }
+// Ball.go()
+// Ball.go()
 
 let Roullete = {
     grau:0,
@@ -150,4 +171,6 @@ let Audios = {
         audio.play()
     }
 }
+
 // Ball.go()
+// render.play(5)

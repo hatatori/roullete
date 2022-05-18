@@ -140,6 +140,7 @@ body{
     width: 100%;
     height: 100%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .odd {background: linear-gradient(45deg, #d61d09, #9b1608)}

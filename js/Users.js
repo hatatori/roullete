@@ -1,9 +1,32 @@
 class User {
 
-    constructor(){
-        this.balance = 0
+    constructor(name, balance = 0){
+        this.id = null
+        this.name = name
+        this.balance = balance
         this.bet = 0
         this.choice = 0
+        this.betsChoices = []
+        this.betsValues = []
+        this.numbersRoullete = []
+        this.earns = []
+        this.quantity = 5
+    }
+   
+    getNumbersRoullete(){
+        return this.numbersRoullete.slice(-this.quantity)
+    }
+
+    getBetsChoices(){
+        return this.betsChoices.slice(-this.quantity)
+    }
+   
+    getBetsValues(){
+        return this.betsValues.slice(-this.quantity)
+    }
+
+    getEarns(){
+        return this.earns.slice(-this.quantity)
     }
 
     setBet(value){ 
@@ -21,8 +44,12 @@ class User {
         this.refresh()
     }
 
-    toDollar(value){
-        return `U$ ${value.toFixed(2).replace(/\./g,",")}`
+    won(){
+        return Roullete.value == this.choice || game.choice[this.group].includes(Roullete.value)
+    }
+
+    toDollar(v){
+        return `U$ ${Number(v).toFixed(2).replace(/\./g,",")}`
     }
 
     get group(){

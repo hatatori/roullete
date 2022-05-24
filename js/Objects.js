@@ -26,6 +26,7 @@ let Ball = {
         }else{
             this.r += 0.01
             this.factor = 0.001
+            // alert('ok')
 
             // this.el.classList.add('wave')
             // setTimeout(()=>this.el.classList.remove('wave'),500)
@@ -60,13 +61,12 @@ let Ball = {
 
         this.deg(this.degree/this.dec)
         
-        // Audio.roll()
-        
-        if(this.velocity.toFixed(1) == 0.9 && !this.el.classList.contains('wave')){
-            this.el.classList.add('wave')
-            setTimeout(()=>this.el.classList.remove('wave'),1000)
+        if(this.velocity.toFixed(2) == 0.55 && !this.el.classList.contains('waveX')){
+            this.el.classList.add('waveX')
+            this.el.classList.add('waveY')
+            setTimeout(()=>this.el.classList.remove('waveX'),1000)
+            setTimeout(()=>this.el.classList.remove('waveY'),1000)
         }
-
     },
     
     start(){ 
@@ -85,7 +85,8 @@ let Ball = {
         this.factor = 0.00001
         this.dec = 10
         this.aceleration = 1
-        this.velocity = 1.3045
+        this.velocity = 0.8074
+        // this.velocity = 1.8016
 
         Audios.roll()
 
@@ -139,26 +140,14 @@ let Roullete = {
         this.num = this.order.indexOf(n) //2
         this.grau = this.num * 9.73
         
-        // this.grau = this.num
+        // this.grau -= 180
         // this.velocity = 3.29
         // this.aceleration = 1
-
-        // Roullete.choice(0)
-        this.grau -= 180
-        this.velocity = 3.29
+        
+        this.grau -= 360
+        // this.velocity = 3.29
+        this.velocity = 6.575
         this.aceleration = 1
-
-
-
-
-
-        // Roullete.grau = 0
-        // Roullete.velocity = 6.58 * 2 + this.factor * this.num
-        // Roullete.aceleration = 1
-
-        // this.grau = 0
-        // this.velocity = 6.58
-        // this.aceleration = 1
 
     },
 

@@ -6,3 +6,7 @@ setInterval(()=>{
     Roullete.animation()
     Ball.spin()
 },1000/60)
+
+// Audios.roll()
+// Ball.go(5)
+Roullete.choice(0)

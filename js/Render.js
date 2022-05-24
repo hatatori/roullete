@@ -66,10 +66,8 @@ class Render{
 
     historicAdd(n){
         let div = document.createElement('div')
-        let classdiv = n%2 == 0 ? 'ball-black' : 'ball-red'
-
-        div.innerHTML = `<div class="ball ${classdiv}">${n}</div>`
-        
+        let class_color_num = 'ball-'+game.getColorNum(n)
+        div.innerHTML = `<div class="ball ${class_color_num}">${n}</div>`
         historic.style.height = '70px'
         historic.style.transition = '0.5s'
         historic.style.padding = "10px"
@@ -86,25 +84,36 @@ class Render{
         // Audios.roll()
 
         setTimeout(()=>{
-            // this.message_information(n)
-            console.log(n)
             this.historicAdd(n)
         },5000)
 
         setTimeout(()=>{
+            // this.hideRoullete()
+            // this.menuHide()
+        },5000)
+
+        setTimeout(()=>{
             this.hideRoullete()
-            // this.coinClean()
             this.coinClean()
             this.menuHide()
 
+            user.add = 0
+            user.earn = 0
 
-            if(Roullete.value == user.choice || game.choice[user.group].includes(Roullete.value)){
-                user.setBalance( user.balance + user.bet + user.bet * game.porcentage[user.group])
+            if(user.won()){
+                user.add = user.bet * game.porcentage[user.group]
+                user.earn = user.balance + user.bet + user.add
+                user.setBalance(user.earn)
                 render.message_win("Ganhou", this.toDollar(user.bet * game.porcentage[user.group]))
-                user.setBet(0)
             }
+
+            user.betsChoices.push(user.choice)
+            user.betsValues.push(user.bet)
+            user.earns.push(user.add)
+            user.numbersRoullete.push(n)
+
             user.setBet(0)
-        // roullete bye
+
         },8*1000)
     }
 

@@ -83,13 +83,7 @@ class Render{
         Roullete.value = n
         // Audios.roll()
 
-        
-
-
-
-        setTimeout(()=>{
-            this.historicAdd(n)
-        },5000)
+        setTimeout(()=>{ this.historicAdd(n) },5000)
 
         setTimeout(()=>{
             // this.hideRoullete()
@@ -123,6 +117,11 @@ class Render{
 
     play(n){
         
+        if(gameTime.dif1 <= 0){
+            this.message_information("Time limit over, come back tomorrow")
+            return false
+        }
+
         if(user.getBet() > user.getBetMax()){
             this.message_information("Above the value exceeded, value max "+user.getBetMax())
             return false
@@ -182,9 +181,18 @@ class Render{
         img.style.left   = n*coin0.offsetLeft+'px'
         img.style.width  = coin0.offsetWidth+'px'
         img.style.height = coin0.offsetHeight+'px'
+        img.style.pointerEvents = 'none'
         img.value = value
         
-        img.onclick = () => render.coinRemoveLast()
+        // img.onclick = () => {
+            // render.coinRemoveLast()
+        // }
+
+        
+
+        img.addEventListener('click', ()=>{
+            render.coinRemoveLast()
+        })
 
         setTimeout(()=>{
             img.removeAttribute('style')

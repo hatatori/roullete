@@ -76,20 +76,22 @@ class GameTime{
         
     }
 
-    renew(){
+    renew(ta, tb){
 
         let new_date1 = new Date()
         let new_date2 = new Date()
+
+        this.t1 = new_date1
+        this.t2 = new_date2
     
-        // addMinutes(new_date1, this.maxT1)
-        // addMinutes(new_date2, this.maxT2)
-    
+        addSeconds(this.t1, ta)
+        addSeconds(this.t2, tb)
+
         localStorage.removeItem('t1')
         localStorage.removeItem('t2')
-    
-        localStorage.setItem('t1', new_date1)
-        localStorage.setItem('t2', new_date2)
-    
+
+        localStorage.setItem('t1', this.t1)
+        localStorage.setItem('t2', this.t2)
     }
 
     check(){

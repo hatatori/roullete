@@ -9,6 +9,8 @@
 /* text color */
 .t-blue-1{ color: #0B887F; }
 .t-gray-1{ color: #5A5A5A; }
+.t-white{color: white;}
+.t-black{color: black;}
 
 /* fonts */
 .font-style-1{
@@ -56,6 +58,11 @@
 .left{left: 0px;}
 .right{right: 0px;}
 .bottom{bottom: 0px;}
+
+.top10{top: 10px;}
+.left10{left: 10px;}
+.right10{right: 10px;}
+.bottom10{bottom: 10px;}
 
 .w-full{width: 100%;}
 .h-full{height: 100%;}

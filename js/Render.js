@@ -83,6 +83,10 @@ class Render{
         Roullete.value = n
         // Audios.roll()
 
+        
+
+
+
         setTimeout(()=>{
             this.historicAdd(n)
         },5000)
@@ -118,6 +122,12 @@ class Render{
     }
 
     play(n){
+        
+        if(user.getBet() > user.getBetMax()){
+            this.message_information("Above the value exceeded, value max "+user.getBetMax())
+            return false
+        }
+
         if(this.coinsAdded.length == 0)
             this.message_information("Empty table, bet some value")
         else

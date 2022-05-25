@@ -11,6 +11,7 @@ class User {
         this.numbersRoullete = []
         this.earns = []
         this.quantity = 5
+        this.maxBet = 0
     }
    
     getNumbersRoullete(){
@@ -25,8 +26,20 @@ class User {
         return this.betsValues.slice(-this.quantity)
     }
 
+    getBalance(){
+        return this.balance
+    }
+
     getEarns(){
         return this.earns.slice(-this.quantity)
+    }
+
+    betLimit(){
+        return user.getBalance()*5/100
+    }
+
+    getBet(){
+        return this.bet
     }
 
     setBet(value){ 
@@ -50,6 +63,14 @@ class User {
 
     toDollar(v){
         return `U$ ${Number(v).toFixed(2).replace(/\./g,",")}`
+    }
+
+    setBetMax(){
+        this.maxBet = this.balance*5/100
+    }
+
+    getBetMax(){
+        return this.maxBet
     }
 
     get group(){

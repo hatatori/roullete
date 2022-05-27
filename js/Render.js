@@ -81,7 +81,6 @@ class Render{
         Ball.go()
         Roullete.choice(n)
         Roullete.value = n
-        // Audios.roll()
 
         setTimeout(()=>{ this.historicAdd(n) },5000)
 
@@ -118,7 +117,7 @@ class Render{
     play(n){
         
         if(gameTime.dif1 <= 0){
-            this.message_information("Time limit over, come back tomorrow")
+            this.message_information("Time limit over, go to next table")
             return false
         }
 

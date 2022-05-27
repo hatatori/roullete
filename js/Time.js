@@ -14,6 +14,17 @@ function clock(n){
     return h+":"+m+":"+s
 }
 
+function clock_timestamp(timestamp){
+    let d = new Date(timestamp)
+    let [h, m, s] = [ d.getHours(), d.getMinutes(), d.getSeconds() ]
+
+    h = h < 10 ? "0"+h : h
+    m = m < 10 ? "0"+m : m
+    s = s < 10 ? "0"+s : s
+
+    return h+":"+m+":"+s
+}
+
 let diference = {
     seconds(a,b) { return parseInt((b-a)/1000)                     },
     minutes(a,b) { return parseInt((b-a)/1000/60)        },
@@ -61,57 +72,49 @@ function check(){
 
 class GameTime{
 
-    constructor(maxT1, maxT2){
+    constructor(){
 
         this.currentTime = 0
 
-        this.maxT1 = maxT1
-        this.maxT2 = maxT2
+        this.t1 = localStorage.getItem('t1')
+        this.t2 = localStorage.getItem('t2')
 
-        this.t1 = new Date()
-        this.t2 = new Date()
-
-        addSeconds(this.t1, maxT1)
-        addSeconds(this.t2, maxT2)
-        
     }
 
     renew(ta, tb){
 
-        let new_date1 = new Date()
-        let new_date2 = new Date()
+        let date = new Date()
 
-        this.t1 = new_date1
-        this.t2 = new_date2
-    
-        addSeconds(this.t1, ta)
-        addSeconds(this.t2, tb)
+        this.t1 = date.getTime() + 1000 * 60 * ta
+        this.t2 = date.getTime() + 1000 * 60 * tb
 
         localStorage.removeItem('t1')
         localStorage.removeItem('t2')
 
         localStorage.setItem('t1', this.t1)
         localStorage.setItem('t2', this.t2)
+
     }
 
     check(){
 
-        this.now = new Date()
+        this.now = new Date().getTime()
         
-        this.dif1 = this.t1 - this.now
-        this.dif2 = this.t2 - this.now
+        this.dif1 = parseInt((this.t1-this.now)/1000)
+        this.dif2 = parseInt((this.t2-this.now)/1000)
         
         if(this.dif1 < 0) this.dif1 = 0;   
         if(this.dif2 < 0) this.dif2 = 0;   
         
-        div_t1.innerHTML = clock(parseInt(this.dif1/1000))
-        div_t2.innerHTML = clock(parseInt(this.dif2/1000))
+        div_t1.innerHTML = clock(this.dif1)
+        div_t2.innerHTML = clock(this.dif2)
 
     }
 }
 
+let gameTime = new GameTime()
+gameTime.renew( 1 , 10 )
 
-// gameTime.renew()
 // gameTime.check()
 
 

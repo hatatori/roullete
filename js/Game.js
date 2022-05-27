@@ -1,5 +1,7 @@
-class Game{
+class Game extends Connection{
     constructor() {
+        
+        super()
 
         this.choice = {}
         this.choice.empty    = []
@@ -33,6 +35,7 @@ class Game{
         this.porcentage.odd      = 1.2
         this.porcentage.number   = 1
     }
+    
 
     getGroupNumber(n){
         let group_number = []
@@ -94,3 +97,6 @@ class Game{
 }
 
 let game = new Game()
+game.setPorcentage()
+// connection = new Connection()
+// connection.connect(1)

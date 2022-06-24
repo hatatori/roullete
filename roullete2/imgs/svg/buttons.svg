@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="806" height="173" viewBox="0 0 806 173">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.734" y1="1" x2="0.222" y2="0.071" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <clipPath id="clip-buttons">
+      <rect width="806" height="173"/>
+    </clipPath>
+  </defs>
+  <g id="buttons" clip-path="url(#clip-buttons)">
+    <g id="Grupo_245" data-name="Grupo 245" transform="translate(-137 -1316)">
+      <g id="Grupo_134" data-name="Grupo 134" transform="translate(11 49)">
+        <g id="Grupo_125" data-name="Grupo 125" transform="translate(365.901 1267.43)">
+          <ellipse id="Elipse_157" data-name="Elipse 157" cx="56" cy="56.5" rx="56" ry="56.5" transform="translate(2.099 2.57)" fill="#222"/>
+          <circle id="Elipse_161" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.099 30.57)" fill="none"/>
+          <g id="Elipse_159" data-name="Elipse 159" transform="translate(0.099 -0.43)" fill="none" stroke="#000" stroke-width="10" opacity="0.16">
+            <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+            <ellipse cx="58" cy="59" rx="53" ry="54" fill="none"/>
+          </g>
+        </g>
+        <text id="LIMPAR" transform="translate(423 1434)" fill="rgba(6,255,237,0.5)" font-size="24" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.115em"><tspan x="-51.255" y="0">LIMPAR</tspan></text>
+      </g>
+      <g id="Grupo_133" data-name="Grupo 133" transform="translate(14 49)">
+        <text id="DESFAZER" transform="translate(190 1434)" fill="rgba(6,255,237,0.5)" font-size="24" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.115em"><tspan x="-67.287" y="0">DESFAZER</tspan></text>
+        <g id="Grupo_131" data-name="Grupo 131" transform="translate(133.321 1267.43)">
+          <g id="Grupo_124" data-name="Grupo 124">
+            <ellipse id="Elipse_157-2" data-name="Elipse 157" cx="56" cy="56.5" rx="56" ry="56.5" transform="translate(1.679 2.57)" fill="#222"/>
+            <circle id="Elipse_161-2" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.679 30.57)" fill="none"/>
+            <g id="Elipse_159-2" data-name="Elipse 159" transform="translate(-0.321 -0.43)" fill="none" stroke="#000" stroke-width="10" opacity="0.16">
+              <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+              <ellipse cx="58" cy="59" rx="53" ry="54" fill="none"/>
+            </g>
+          </g>
+          <path id="Caminho_77" data-name="Caminho 77" d="M2774.024,1556.024l-17.64,17.64,17.64,17.64" transform="translate(-2706.705 -1514.473)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="11"/>
+        </g>
+      </g>
+      <g id="Grupo_136" data-name="Grupo 136" transform="translate(14 49)">
+        <g id="Grupo_122" data-name="Grupo 122" transform="translate(807.417 1267.43)">
+          <circle id="Elipse_157-3" data-name="Elipse 157" cx="56.5" cy="56.5" r="56.5" transform="translate(1.582 2.57)" fill="#222"/>
+          <g id="Elipse_158" data-name="Elipse 158" transform="translate(1.582 2.57)" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="24" opacity="0.34">
+            <circle cx="56.5" cy="56.5" r="56.5" stroke="none"/>
+            <circle cx="56.5" cy="56.5" r="51.5" fill="none"/>
+          </g>
+          <ellipse id="Elipse_160" data-name="Elipse 160" cx="33.5" cy="32.5" rx="33.5" ry="32.5" transform="translate(24.582 26.57)" opacity="0.22" fill="url(#linear-gradient)"/>
+          <circle id="Elipse_161-3" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.582 30.57)" fill="none"/>
+          <g id="Elipse_159-3" data-name="Elipse 159" transform="translate(-0.418 -0.43)" fill="none" stroke="#000" stroke-width="5" opacity="0.16">
+            <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+            <ellipse cx="58" cy="59" rx="55.5" ry="56.5" fill="none"/>
+          </g>
+          <text id="_" data-name="$" transform="translate(57.582 74.57)" fill="rgba(151,151,151,0.5)" font-size="38" font-family="SegoeUI, Segoe UI" letter-spacing="0.104em"><tspan x="-10.242" y="0">$</tspan></text>
+        </g>
+        <text id="VALORES" transform="translate(869 1434)" fill="rgba(6,255,237,0.5)" font-size="24" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.115em"><tspan x="-59.983" y="0">VALORES</tspan></text>
+      </g>
+      <g id="Grupo_135" data-name="Grupo 135" transform="translate(-17 49)">
+        <text id="GIRAR" transform="translate(672 1434)" fill="rgba(6,255,237,0.5)" font-size="24" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.115em"><tspan x="-41.959" y="0">GIRAR</tspan></text>
+        <g id="Grupo_128" data-name="Grupo 128" transform="translate(615.659 1267.43)">
+          <g id="Grupo_126" data-name="Grupo 126">
+            <ellipse id="Elipse_157-4" data-name="Elipse 157" cx="56" cy="56.5" rx="56" ry="56.5" transform="translate(2.341 2.57)" fill="#222"/>
+            <circle id="Elipse_161-4" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.341 30.57)" fill="none"/>
+            <g id="Elipse_159-4" data-name="Elipse 159" transform="translate(0.341 -0.43)" fill="none" stroke="#000" stroke-width="10" opacity="0.16">
+              <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+              <ellipse cx="58" cy="59" rx="53" ry="54" fill="none"/>
+            </g>
+          </g>
+          <g id="Grupo_127" data-name="Grupo 127" transform="translate(20.583 24.594)">
+            <path id="Caminho_78" data-name="Caminho 78" d="M12.619,0,0,12.619,12.619,25.238" transform="translate(25.238 26.278) rotate(90)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="11"/>
+            <g id="Elipse_167" data-name="Elipse 167" transform="translate(6.758 -0.024)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="10" stroke-dasharray="168 43">
+              <circle cx="34.5" cy="34.5" r="34.5" stroke="none"/>
+              <circle cx="34.5" cy="34.5" r="29.5" fill="none"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

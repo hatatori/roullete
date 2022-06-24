@@ -1,0 +1,169 @@
+.message_information{
+    position: fixed;
+    top: 5%;
+    color: white;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    font-size: x-large;
+    width: 200px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-shadow: 0px 0px 10px black;
+    animation: slide-up-2 1s, fade-in 1s, slide-up 1s 2s, fade-out 1s 2s forwards ;
+}
+
+/* z-index */
+.z-1{z-index: 1;}
+.z-2{z-index: 2;}
+.z-3{z-index: 3;}
+.z-4{z-index: 4;}
+.z-5{z-index: 5;}
+
+/* slide */
+
+@keyframes slide-up{
+    0%{transform: translateY(0px)}
+    100%{transform: translateY(-50px)}
+}
+
+@keyframes slide-up-2{
+    0%{transform: translateY(50px)}
+    100%{transform: translateY(0px)}
+}
+
+@keyframes slide-down{
+    0%{transform: translateY(-50px)}
+    100%{transform: translateY(0px)}
+}
+
+/* fade */
+
+@keyframes fade-in{
+    0%  {opacity: 0; visibility: visible;}
+    100%{opacity: 1;}
+}
+
+
+@keyframes fade-out{
+    0%  {opacity: 1; }
+    100%{opacity: 0; visibility: hidden;}
+}
+
+@keyframes to-50{
+    0%  {width: 0px;}
+    100%{width: 50px;}
+}
+
+/* zoom */
+
+.slide-up{animation: slide-up 0.2s forwards cubic-bezier(0.12, 0.91, 0.55, 1.01);}
+.slide-up-2{animation: slide-up-2 0.2s forwards cubic-bezier(0.12, 0.91, 0.55, 1.01);}
+.slide-down{animation: slide-down 0.2s forwards cubic-bezier(0.12, 0.91, 0.55, 1.01);}
+
+.zoom-in{animation: zoom-in 0.5s forwards }
+.zoom-out{animation: zoom-out 0.5s forwards }
+
+.zoom-in-fade-in{animation: zoom-in 0.5s forwards, fade-in 0.5s forwards }
+.zoom-out-fade-in{animation: zoom-out 0.5s forwards, fade-in 0.5s forwards }
+
+.zoom-in-fade-out{animation: zoom-in 0.5s forwards, fade-out 0.5s forwards }
+.zoom-out-fade-out{animation: zoom-out 0.5s forwards, fade-out 0.5s forwards }
+
+.fade-in{animation: fade-in 0.5s forwards }
+.fade-out{animation: fade-out 0.5s forwards }
+
+
+.zoom{animation: zoom-out 0.2s forwards      cubic-bezier(0.12, 0.91, 0.55, 1.01);}
+.zoom:hover{animation: zoom-in 0.2s forwards cubic-bezier(0.12, 0.91, 0.55, 1.01); cursor: pointer;}
+
+@keyframes zoom-in{
+    0%  {transform: scale(1.0);}
+    100%{transform: scale(1.2);}
+}
+
+
+@keyframes zoom-out{
+    0%  {transform: scale(1.2);}
+    100%{transform: scale(1.0);}
+}
+
+
+/* cubic-bezier(0.12, 0.91, 0.55, 1.01); */
+
+
+/* rotate clock */
+
+
+.rotate{animation: rotate 7s infinite linear;}
+.rotate-1{animation: rotate 1s infinite linear;}
+.rotate-1{animation: rotate 2s infinite linear;}
+.rotate-2{animation: rotate 2.5s infinite linear;}
+.rotate-3{animation: rotate 3s infinite linear;}
+.rotate-4{animation: rotate 3.5s infinite linear;}
+.rotate-5{animation: rotate 4s infinite linear;}
+.rotate-6{animation: rotate 4.5s infinite linear;}
+.rotate-7{animation: rotate 5s infinite linear;}
+.rotate-8{animation: rotate 5.5s infinite linear;}
+.rotate-9{animation: rotate 6s infinite linear;}
+
+
+.hover\:rotate-180:hover{transform: rotate(180deg);}
+
+@keyframes rotate{
+    0%{transform:   rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.waveY{animation: waveY 0.7s forwards;}
+.waveX{animation: waveX 0.7s forwards;}
+
+@keyframes waveY{
+     0%{transform: translateY( 0px)  }
+    10%{transform: translateY(-13px)  }
+    20%{transform: translateY( 0px)  }
+    30%{transform: translateY(-13px)  }
+    40%{transform: translateY( 0px)    }
+    50%{transform: translateY(-13px)    }
+    60%{transform: translateY( 0px)    }
+    70%{transform: translateY(-13px)    }
+    80%{transform: translateY( 13px)    }
+    90%{transform: translateY(-13px)    }
+    95%{transform: translateY(-0px)    }
+    97%{transform: translateY(-13px)    }
+   100%{transform: translateY( 0px)    }
+}
+
+@keyframes waveX{
+     0%{transform: translateX( 0px)  }
+    10%{transform: translateX(-13px)  }
+    20%{transform: translateX( 0px)  }
+    30%{transform: translateX(-13px)  }
+    40%{transform: translateX( 0px)    }
+    50%{transform: translateX(-13px)    }
+    60%{transform: translateX( 0px)    }
+    70%{transform: translateX(-13px)    }
+    80%{transform: translateX( 13px)    }
+    90%{transform: translateX(-13px)    }
+    95%{transform: translateX(-0px)    }
+    97%{transform: translateX(-13px)    }
+   100%{transform: translateX( 0px)    }
+}
+
+.ty0{transform: translateY(0%);}
+.ty10{transform: translateY(10%);}
+.ty20{transform: translateY(20%);}
+.ty30{transform: translateY(30%);}
+.ty40{transform: translateY(40%);}
+.ty50{transform: translateY(50%);}
+
+.-ty0{transform: translateY(0%);}
+.-ty10{transform: translateY(-10%);}
+.-ty20{transform: translateY(-20%);}
+.-ty30{transform: translateY(-30%);}
+.-ty40{transform: translateY(-40%);}
+.-ty50{transform: translateY(-50%);}
+
+
+

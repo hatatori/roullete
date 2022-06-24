@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <clipPath id="clip-btn-back">
+      <rect width="116" height="116"/>
+    </clipPath>
+  </defs>
+  <g id="btn-back" clip-path="url(#clip-btn-back)">
+    <g id="Grupo_245" data-name="Grupo 245" transform="translate(-147 -1316)">
+      <g id="Grupo_133" data-name="Grupo 133" transform="translate(14 49)">
+        <g id="Grupo_131" data-name="Grupo 131" transform="translate(133.321 1267.43)">
+          <g id="Grupo_124" data-name="Grupo 124">
+            <ellipse id="Elipse_157" data-name="Elipse 157" cx="56" cy="56.5" rx="56" ry="56.5" transform="translate(1.679 2.57)" fill="#222"/>
+            <circle id="Elipse_161" data-name="Elipse 161" cx="28.5" cy="28.5" r="28.5" transform="translate(29.679 30.57)" fill="none"/>
+            <g id="Elipse_159" data-name="Elipse 159" transform="translate(-0.321 -0.43)" fill="none" stroke="#000" stroke-width="10" opacity="0.16">
+              <ellipse cx="58" cy="59" rx="58" ry="59" stroke="none"/>
+              <ellipse cx="58" cy="59" rx="53" ry="54" fill="none"/>
+            </g>
+          </g>
+          <path id="Caminho_77" data-name="Caminho 77" d="M2774.024,1556.024l-17.64,17.64,17.64,17.64" transform="translate(-2706.705 -1514.473)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="11"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="484" height="484" viewBox="0 0 484 484">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.837" y1="0.143" x2="0.116" y2="0.825" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#854d40"/>
+      <stop offset="1" stop-color="#432720"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2a140c"/>
+      <stop offset="0.815" stop-color="#442017"/>
+      <stop offset="1" stop-color="#25160f"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient-2" x1="0.885" y1="0.069" x2="0.096" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b7925b"/>
+      <stop offset="0.419" stop-color="#9e7035"/>
+      <stop offset="1" stop-color="#713016"/>
+    </linearGradient>
+    <filter id="Elipse_177" x="57.5" y="57.5" width="369" height="369" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x1="0.885" y1="0.069" x2="0.096" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.419" stop-color="#9e7035"/>
+      <stop offset="1" stop-color="#713016"/>
+    </linearGradient>
+    <filter id="Elipse_105" x="107.5" y="106.5" width="270" height="270" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Elipse_104" x="112.5" y="112.5" width="259" height="259" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <radialGradient id="radial-gradient-2" cx="0" cy="0.628" r="0.872" gradientTransform="matrix(0.999, -0.042, 0.023, 0.548, -0.014, 0.284)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#bc8f68"/>
+      <stop offset="0.488" stop-color="#604126"/>
+      <stop offset="1" stop-color="#362110"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.656" cy="0.356" r="0.569" gradientTransform="translate(1.233 -0.281) rotate(101.459)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#be8b60"/>
+      <stop offset="0.358" stop-color="#a5774c"/>
+      <stop offset="0.494" stop-color="#9c6f45"/>
+      <stop offset="1" stop-color="#362110"/>
+    </radialGradient>
+    <clipPath id="clip-roleta">
+      <rect width="484" height="484"/>
+    </clipPath>
+  </defs>
+  <g id="roleta" clip-path="url(#clip-roleta)">
+    <g id="Grupo_240" data-name="Grupo 240" transform="translate(-1759 -986)">
+      <circle id="Elipse_175" data-name="Elipse 175" cx="242" cy="242" r="242" transform="translate(1759 986)" fill="url(#linear-gradient)"/>
+      <circle id="Elipse_176" data-name="Elipse 176" cx="207" cy="207" r="207" transform="translate(1794 1021)" fill="url(#radial-gradient)"/>
+      <g transform="matrix(1, 0, 0, 1, 1759, 986)" filter="url(#Elipse_177)">
+        <g id="Elipse_177-2" data-name="Elipse 177" transform="translate(65 65)" stroke="rgba(163,117,74,0.22)" stroke-width="10" fill="url(#linear-gradient-2)">
+          <circle cx="177" cy="177" r="177" stroke="none"/>
+          <circle cx="177" cy="177" r="172" fill="none"/>
+        </g>
+      </g>
+      <g id="Grupo_191" data-name="Grupo 191" transform="translate(264 660)">
+        <g transform="matrix(1, 0, 0, 1, 1495, 326)" filter="url(#Elipse_105)">
+          <circle id="Elipse_105-2" data-name="Elipse 105" cx="127.5" cy="127.5" r="127.5" transform="translate(115 114)" opacity="0.27" fill="url(#linear-gradient-3)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 1495, 326)" filter="url(#Elipse_104)">
+          <g id="Elipse_104-2" data-name="Elipse 104" transform="translate(120 120)" stroke="rgba(163,117,74,0.22)" stroke-width="10" fill="url(#linear-gradient-2)">
+            <circle cx="122" cy="122" r="122" stroke="none"/>
+            <circle cx="122" cy="122" r="117" fill="none"/>
+          </g>
+        </g>
+      </g>
+      <g id="Elipse_178" data-name="Elipse 178" transform="translate(1776 1003)" fill="none" stroke="#ae7232" stroke-width="4">
+        <circle cx="225" cy="225" r="225" stroke="none"/>
+        <circle cx="225" cy="225" r="223" fill="none"/>
+      </g>
+      <g id="Grupo_194" data-name="Grupo 194" transform="translate(-377 927)">
+        <g id="Retângulo_100" data-name="Retângulo 100" transform="translate(2564 315) rotate(-90)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_104" data-name="Retângulo 104" transform="translate(2179 315) rotate(-90)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_100-2" data-name="Retângulo 100" transform="translate(2499.236 442.035) rotate(-45)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_104-2" data-name="Retângulo 104" transform="translate(2227 169.799) rotate(-45)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_100-3" data-name="Retângulo 100" transform="translate(2236.192 422.236) rotate(45)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_104-3" data-name="Retângulo 104" transform="translate(2508.428 150) rotate(45)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_106" data-name="Retângulo 106" transform="translate(2392 115) rotate(180)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+        <g id="Retângulo_105" data-name="Retângulo 105" transform="translate(2392 500) rotate(180)" fill="none" stroke="#a67536" stroke-width="2">
+          <rect width="28" height="13" rx="6.5" stroke="none"/>
+          <rect x="1" y="1" width="26" height="11" rx="5.5" fill="none"/>
+        </g>
+      </g>
+      <g id="Grupo_190" data-name="Grupo 190" transform="translate(264 909)">
+        <g id="Grupo_46" data-name="Grupo 46" transform="translate(1749.749 308.066)">
+          <path id="Polígono_1" data-name="Polígono 1" d="M12,0,24,49H0Z" transform="translate(49.251 -0.066) rotate(90)" fill="url(#radial-gradient-2)"/>
+          <circle id="Elipse_97" data-name="Elipse 97" cx="9.412" cy="9.412" r="9.412" transform="translate(35.167 3.015)" fill="url(#radial-gradient-3)"/>
+        </g>
+        <g id="Grupo_49" data-name="Grupo 49" transform="translate(1727.657 311.865) rotate(-90)">
+          <path id="Polígono_1-2" data-name="Polígono 1" d="M10.2,0l10.2,51.768H0Z" transform="translate(51.768) rotate(90)" fill="url(#radial-gradient-2)"/>
+          <circle id="Elipse_97-2" data-name="Elipse 97" cx="9.5" cy="9.5" r="9.5" transform="translate(35.865 3.343)" fill="url(#radial-gradient-3)"/>
+        </g>
+        <g id="Grupo_47" data-name="Grupo 47" transform="translate(1726.873 329.906) rotate(180)">
+          <path id="Polígono_1-3" data-name="Polígono 1" d="M10.2,0l10.2,51.768H0Z" transform="translate(51.768) rotate(90)" fill="url(#radial-gradient-2)"/>
+          <ellipse id="Elipse_97-3" data-name="Elipse 97" cx="9.5" cy="10.5" rx="9.5" ry="10.5" transform="translate(36.873 0.906)" fill="url(#radial-gradient-3)"/>
+        </g>
+        <g id="Grupo_48" data-name="Grupo 48" transform="translate(1749.749 325.305) rotate(90)">
+          <path id="Polígono_1-4" data-name="Polígono 1" d="M11.5,0,23,51H0Z" transform="translate(50.695 -0.251) rotate(90)" fill="url(#radial-gradient-2)"/>
+          <circle id="Elipse_97-4" data-name="Elipse 97" cx="9.412" cy="9.412" r="9.412" transform="translate(36.76 3.267)" fill="url(#radial-gradient-3)"/>
+        </g>
+        <ellipse id="Elipse_101" data-name="Elipse 101" cx="17.5" cy="16" rx="17.5" ry="16" transform="translate(1721 303)" fill="url(#radial-gradient-3)"/>
+      </g>
+    </g>
+  </g>
+</svg>

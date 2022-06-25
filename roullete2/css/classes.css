@@ -33,7 +33,7 @@
 
 /* display */
 .flex{display: flex;}
-.none{display: none;}
+.none{display: none !important;}
 
 .flex-wrap{flex-wrap: wrap}
 

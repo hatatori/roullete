@@ -53,7 +53,7 @@ class Render{
 
     blink(group_name){
         let all = [...div_table.children]
-        all.map(e=>e.style.opacity = 0.2)
+        all.map(e=>e.style.opacity = 0.09)
         let reds = [...div_table.querySelectorAll('['+group_name+']')]
         reds.map(e=>e.style.removeProperty('opacity'))
     }
@@ -137,6 +137,8 @@ class Render{
         
         roullete_group.classList.add('zoom-out-fade-in')
         roullete_group.classList.remove('zoom-in-fade-out')
+
+        
     }
 
     hideRoullete(){
@@ -274,6 +276,8 @@ class Render{
         div_table.classList.add('-ty10')
 
         footer_end.classList.add('ty0')
+
+        div_table.style.opacity = 0
     }
 
     menuHide(){
@@ -282,6 +286,8 @@ class Render{
         div_table.classList.remove('-ty10')
 
         footer_end.classList.remove('ty0')
+
+        div_table.style.opacity = 1
     }
 
     choiceBet(n){

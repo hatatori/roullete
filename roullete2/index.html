@@ -22,9 +22,9 @@
         <div class="screen">
 
             <!-- roleta -->
-            <div id="roullete_group" class="none">
-            <!-- <div class="absolute bottom bottom w-full j-center i-center z-5" id="roullete_group" style="display: grid"> -->
-                <div class="m-auto max-w-full max-h-full relative flex j-center i-center" style="width: 400px; height: 100vh">
+            <div id="roullete_group" class="flex none">
+
+                <div class="roulette">
                     <img class="absolute w-full max-w-full" src='imgs/png/roullete-1.png'> <!-- roleta fora -->
                     <div class="rotate-7 w-full h-full flex j-center i-center relative absolute top-0" id="div_roullete">
                         <img class="w-full absolute" src='imgs/png/roullete-2.png' id="img_roleta_numbers">
@@ -57,15 +57,15 @@
             <div class="div_table">
                 <div class="grid grid-col-14 grid-row-5 transition" id="div_table" >
 
-                    <div n="dozen1"  onmouseout="render.blinkOut()" onmouseover="render.blink('dozen1')"   class="square rs-4 cs-2 ce-6">1 st 12</div>
-                    <div n="to18"    onmouseout="render.blinkOut()" onmouseover="render.blink('to18')"     class="square rs-5 cs-2 ce-4">1 to 18</div>
-                    <div n="even"    onmouseout="render.blinkOut()" onmouseover="render.blink('even')"     class="square rs-5 cs-4 ce-6">EVEN</div>
-                    <div n="dozen2"  onmouseout="render.blinkOut()" onmouseover="render.blink('dozen2')"   class="square rs-4 cs-6 ce-10">2 st 12</div>
-                    <div n="black"   onmouseout="render.blinkOut()" onmouseover="render.blink('black')"    class="square rs-5 cs-6 ce-8"> <img width="30px" src="imgs/svg/triangle-black.svg"> </div>
-                    <div n="red"     onmouseout="render.blinkOut()" onmouseover="render.blink('red')"      class="square rs-5 cs-8 ce-10"> <img width="30px" src="imgs/svg/triangle-red.svg"> </div>
-                    <div n="dozen3"  onmouseout="render.blinkOut()" onmouseover="render.blink('dozen3')"   class="square rs-4 cs-10 ce-14">3 st 12</div>
-                    <div n="odd"     onmouseout="render.blinkOut()" onmouseover="render.blink('odd')"      class="square rs-5 cs-10 ce-12">ODD</div>
-                    <div n="to36"    onmouseout="render.blinkOut()" onmouseover="render.blink('to36')"     class="square rs-5 cs-12 ce-14">19 to 36</div>
+                    <div n="dozen1"  onmouseout="render.blinkOut()" onmouseover="render.blink('dozen1')"   class="square square-border rs-4 cs-2 ce-6">1 st 12</div>
+                    <div n="to18"    onmouseout="render.blinkOut()" onmouseover="render.blink('to18')"     class="square square-border rs-5 cs-2 ce-4">1 to 18</div>
+                    <div n="even"    onmouseout="render.blinkOut()" onmouseover="render.blink('even')"     class="square square-border rs-5 cs-4 ce-6">EVEN</div>
+                    <div n="dozen2"  onmouseout="render.blinkOut()" onmouseover="render.blink('dozen2')"   class="square square-border rs-4 cs-6 ce-10">2 st 12</div>
+                    <div n="black"   onmouseout="render.blinkOut()" onmouseover="render.blink('black')"    class="square square-border rs-5 cs-6 ce-8"> <img width="30px" src="imgs/svg/triangle-black.svg"> </div>
+                    <div n="red"     onmouseout="render.blinkOut()" onmouseover="render.blink('red')"      class="square square-border rs-5 cs-8 ce-10"> <img width="30px" src="imgs/svg/triangle-red.svg"> </div>
+                    <div n="dozen3"  onmouseout="render.blinkOut()" onmouseover="render.blink('dozen3')"   class="square square-border rs-4 cs-10 ce-14">3 st 12</div>
+                    <div n="odd"     onmouseout="render.blinkOut()" onmouseover="render.blink('odd')"      class="square square-border rs-5 cs-10 ce-12">ODD</div>
+                    <div n="to36"    onmouseout="render.blinkOut()" onmouseover="render.blink('to36')"     class="square square-border rs-5 cs-12 ce-14">19 to 36</div>
                     
                     <div n="0" class="square green relative cs-1 rs-1 re-3 col-2">0</div>
                     <div to18   dozen1  col1    red       odd      n="1"     class="square">1</div>
@@ -105,9 +105,9 @@
                     <div to36   dozen3  col3    black     odd      n="35"    class="square">35</div>
                     <div to36   dozen3  col3    red       even     n="36"    class="square">36</div>
 
-                    <div n="col1" onmouseout="render.blinkOut()" onmouseover="render.blink('col1')" class="square rs-1 cs-14 col-2"><p>2to18</p></div>
-                    <div n="col2" onmouseout="render.blinkOut()" onmouseover="render.blink('col2')" class="square rs-2 cs-14 col-2"><p>2to18</p></div>
-                    <div n="col3" onmouseout="render.blinkOut()" onmouseover="render.blink('col3')" class="square rs-3 cs-14 col-2"><p>2to18</p></div>
+                    <div n="col1" onmouseout="render.blinkOut()" onmouseover="render.blink('col1')" class="square square-border rs-1 cs-14 col-2"><p>2to18</p></div>
+                    <div n="col2" onmouseout="render.blinkOut()" onmouseover="render.blink('col2')" class="square square-border rs-2 cs-14 col-2"><p>2to18</p></div>
+                    <div n="col3" onmouseout="render.blinkOut()" onmouseover="render.blink('col3')" class="square square-border rs-3 cs-14 col-2"><p>2to18</p></div>
 
                 </div>
             </div>
@@ -137,6 +137,19 @@
 
             <footer id="footer" class="transition ty100 z-2">
                 
+                
+                <div class="footer-line-2 ">
+                    <div class="flex j-center m-auto gap-5 flex-wrap" style="gap: 1em">
+                        <img draggable="false" id="coin1"    onclick="Audios.select2(); render.coinAdd(1)" class="coin" src="imgs/png2/coin-1.png">
+                        <img draggable="false" id="coin5"    onclick="Audios.select2(); render.coinAdd(5)" class="coin" src="imgs/png2/coin-5.png">
+                        <img draggable="false" id="coin10"   onclick="Audios.select2(); render.coinAdd(10)" class="coin" src="imgs/png2/coin-10.png">
+                        <img draggable="false" id="coin25"   onclick="Audios.select2(); render.coinAdd(25)" class="coin" src="imgs/png2/coin-25.png">
+                        <img draggable="false" id="coin50"   onclick="Audios.select2(); render.coinAdd(50)" class="coin" src="imgs/png2/coin-50.png">
+                        <img draggable="false" id="coin100"  onclick="Audios.select2(); render.coinAdd(100)" class="coin" src="imgs/png2/coin-100.png">
+                        <img draggable="false" id="coin500"  onclick="Audios.select2(); render.coinAdd(500)" class="coin" src="imgs/png2/coin-500.png">
+                        <img draggable="false" id="coin1000" onclick="Audios.select2(); render.coinAdd(1000)" class="coin" src="imgs/png2/coin-1000.png">
+                    </div>
+                </div>
 
                 <!-- <div style="width: 100%; height: 23px; background-image: url('imgs/png2/table1.png'); box-shadow: 0px -5px 10px #00000055"></div> -->
                 
@@ -167,19 +180,6 @@
                     <div class="zoom" onclick="render.menuHide()">
                         <img src="imgs/svg/btn-close.svg" width="50px">    
                         <p class="font-style-1">CLOSE</p>
-                    </div>
-                </div>
-
-                <div class="footer-line-2 ">
-                    <div class="flex j-center m-auto gap-5 flex-wrap" style="gap: 1em">
-                        <img draggable="false" id="coin1"    onclick="Audios.select2(); render.coinAdd(1)" class="coin" src="imgs/png2/coin-1.png">
-                        <img draggable="false" id="coin5"    onclick="Audios.select2(); render.coinAdd(5)" class="coin" src="imgs/png2/coin-5.png">
-                        <img draggable="false" id="coin10"   onclick="Audios.select2(); render.coinAdd(10)" class="coin" src="imgs/png2/coin-10.png">
-                        <img draggable="false" id="coin25"   onclick="Audios.select2(); render.coinAdd(25)" class="coin" src="imgs/png2/coin-25.png">
-                        <img draggable="false" id="coin50"   onclick="Audios.select2(); render.coinAdd(50)" class="coin" src="imgs/png2/coin-50.png">
-                        <img draggable="false" id="coin100"  onclick="Audios.select2(); render.coinAdd(100)" class="coin" src="imgs/png2/coin-100.png">
-                        <img draggable="false" id="coin500"  onclick="Audios.select2(); render.coinAdd(500)" class="coin" src="imgs/png2/coin-500.png">
-                        <img draggable="false" id="coin1000" onclick="Audios.select2(); render.coinAdd(1000)" class="coin" src="imgs/png2/coin-1000.png">
                     </div>
                 </div>
 

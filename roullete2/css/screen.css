@@ -136,13 +136,14 @@ body{
 }
 
 .back{
-    /* background: url(../imgs/png/back2.png); */
+    background: url(../imgs/jpg/back5.jpg);
     width: 100%;
     height: 100vh;
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 0;
+    z-index: 3;
+    /* background-color: red; */
 }
 
 /* alert */
@@ -392,7 +393,7 @@ g:hover > rect{
     right: 0.5em;
     /* left: 0px; */
     margin: auto;
-    width: 50px;
+    width: 80px;
     /* float: -1; */
     cursor: pointer;
 }
@@ -420,6 +421,7 @@ g:hover > rect{
     bottom: 0px;
     left: 0px;
     right: 0px;
+    z-index: 3;
 }
 
 .historic{

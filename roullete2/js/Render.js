@@ -280,6 +280,7 @@ class Render{
         div_table.style.opacity = 0
 
         btn_float_menu.style.display = 'none'
+        div_table.style.pointerEvents='none'
     }
 
     menuHide(){
@@ -290,7 +291,7 @@ class Render{
         footer_end.classList.remove('ty0')
 
         div_table.style.opacity = 1
-
+        div_table.style.pointerEvents='all'
         
     }
 

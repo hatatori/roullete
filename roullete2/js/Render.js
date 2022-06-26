@@ -9,9 +9,11 @@ class Render{
         for(let el of this.squares){
             el.onclick=()=>{
                 this.choiceBet(el.getAttribute('n')) 
-                // user.setChoice(3)
                 user.setChoice(el.getAttribute('n'))
-                this.menuShow()
+
+                btn_float_menu.style.display = 'block'
+                // btn_float_menu.addEventListener('click', btn_float_menu='none')
+                // this.menuShow()
             }
         }
     }
@@ -29,6 +31,7 @@ class Render{
         let div = document.createElement('div')
         div.innerHTML = `
         <div class="alert fade-in">
+            <img src='imgs/png/bag.png' width="200px">
             <div class="alert-in zoom-in">
                 <p>${txt1}</p>
                 <h1>${txt2}</h1>
@@ -84,10 +87,10 @@ class Render{
 
         setTimeout(()=>{ this.historicAdd(n) },5000)
 
-        setTimeout(()=>{
+        // setTimeout(()=>{
             // this.hideRoullete()
             // this.menuHide()
-        },5000)
+        // },5000)
 
         setTimeout(()=>{
             this.hideRoullete()
@@ -97,7 +100,9 @@ class Render{
             user.add = 0
             user.earn = 0
 
-            if(user.won()){
+            console.log(user)
+
+            if(user.win()){
                 user.add = user.bet * game.porcentage[user.group]
                 user.earn = user.balance + user.bet + user.add
                 user.setBalance(user.earn)
@@ -134,11 +139,8 @@ class Render{
 
     showRoullete(){
         roullete_group.classList.remove('none')
-        
         roullete_group.classList.add('zoom-out-fade-in')
         roullete_group.classList.remove('zoom-in-fade-out')
-
-        
     }
 
     hideRoullete(){
@@ -192,8 +194,6 @@ class Render{
         img.onclick = () => {
             render.coinRemoveLast()
         }
-
-        
 
         img.addEventListener('click', ()=>{
             // render.coinRemoveLast()
@@ -278,6 +278,8 @@ class Render{
         footer_end.classList.add('ty0')
 
         div_table.style.opacity = 0
+
+        btn_float_menu.style.display = 'none'
     }
 
     menuHide(){
@@ -288,6 +290,8 @@ class Render{
         footer_end.classList.remove('ty0')
 
         div_table.style.opacity = 1
+
+        
     }
 
     choiceBet(n){
@@ -305,3 +309,4 @@ class Render{
     }
 
 }
+

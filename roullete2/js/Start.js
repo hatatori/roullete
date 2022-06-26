@@ -9,6 +9,13 @@ let render = new Render()
 setInterval(()=>{
     Roullete.animation()
     Ball.spin()
+
+    if( document.body.offsetWidth > document.body.offsetHeight )
+        rotate_mobile.style.display='none'
+    else
+        rotate_mobile.removeAttribute('style')
+
+
 },1000/60)
 
 // Roullete.choice(0)

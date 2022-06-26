@@ -14,6 +14,11 @@
 
     <div class="back"></div>
 
+    <div class="rotate-mobile" id="rotate_mobile">
+        <h4>Rotate your mobile to horizontal screen</h4>
+        <img src="imgs/jpg/rotate.jpg">
+    </div>
+
     <div class="absolute t-white top10 left10" id="div_t1">00:00:00</div>
     <div class="absolute t-white top10 right10" id="div_t2">01:00:00</div>
 
@@ -167,7 +172,8 @@
                         <p class="font-style-1">CLEAR</p>
                     </div>
                     
-                    <div class="zoom" onclick="render.play(parseInt(Math.random()*36))" style="transform: translateY(-40px)"  >
+                    <!-- <div class="zoom" onclick="render.play(parseInt(Math.random()*36))" style="transform: translateY(-40px)"  > -->
+                    <div class="zoom" onclick="render.play(3)" style="transform: translateY(-40px)"  >
                         <img src="imgs/svg/btn-play.svg" width="50px">    
                         <p class="font-style-1">PLAY</p>
                     </div>
@@ -189,9 +195,10 @@
         </div>
     </div>
 
-    <img onclick="render.menuShow()" id="btn_float_menu" src='imgs/svg/btn-menu.svg'>
+    <!-- <img onclick="render.menuShow()" id="btn_float_menu" src='imgs/svg/btn-menu.svg'> -->
+    <img class="pulse" onclick="render.menuShow()" id="btn_float_menu" src='imgs/png/bet.png' style="display: none;">
 
-    <script src="js/Connection.js"></script>
+    <!-- <script src="js/Connection.js"></script> -->
     <script src="js/Objects.js"></script>
     <script src="js/Game.js"></script>
     <script src="js/Render.js"></script>
@@ -199,6 +206,7 @@
     <script src="js/Time.js"></script>
     <script src="js/Start.js"></script>
 
+    <!-- <script>render.message_win('Earn', 'U$ 200')</script> -->
 
 </body>
 </html>

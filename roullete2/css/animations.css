@@ -163,4 +163,11 @@
 .-ty50{transform: translateY(-50%);}
 
 
+.pulse{
+    animation: pulse 0.5s alternate infinite;
+}
 
+@keyframes pulse{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}

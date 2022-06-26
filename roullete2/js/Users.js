@@ -1,6 +1,5 @@
-class User extends Connection{
+class User{
     constructor(name, id = 1){
-        super()
         this.id = id
         this.name = name
         this.balance = 0
@@ -60,6 +59,10 @@ class User extends Connection{
     setChoice(value){ 
         this.choice = value 
         this.refresh()
+    }
+
+    win(){
+        return Roullete.value == this.choice || game.choice[this.group].includes(Roullete.value)
     }
 
     won(){

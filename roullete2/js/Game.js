@@ -1,7 +1,7 @@
-class Game extends Connection{
+class Game{
     constructor() {
         
-        super()
+        // super()
 
         this.choice = {}
         this.choice.empty    = []
@@ -97,6 +97,6 @@ class Game extends Connection{
 }
 
 let game = new Game()
-game.setPorcentage()
+// game.setPorcentage()
 // connection = new Connection()
 // connection.connect(1)

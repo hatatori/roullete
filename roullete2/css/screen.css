@@ -3,6 +3,10 @@
     --green-1: #356825;
     --green-2: #022813;
     --green-4: #096113;
+    
+    --green-1: #2ecc71;
+    --green-2: #27ae60;
+
 
     --gray-1: #222222;
     --gray-2: #101010;
@@ -102,6 +106,35 @@ body{
 }
 /* max-w-full max-h-full relative flex j-center i-center */
 
+.rotate-mobile{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background: url(../imgs/jpg/back5.jpg);
+    color: white;
+}
+
+.rotate-mobile img{
+    width: 300px;
+    max-width: 90%;
+    filter: invert(1);
+    mix-blend-mode: lighten;
+    filter: invert(1);
+}
+
+.rotate-mobile h4{
+    text-align: center;
+    font-size: 3em;
+}
+
 .back{
     /* background: url(../imgs/png/back2.png); */
     width: 100%;
@@ -117,22 +150,26 @@ body{
 .alert{
     width: 100%;
     height: 100%;
-    background-color: var(--green-2);
+    /* background-color: var(--green-2); */
+    /* background-color: #02281355; */
+    background-image: url('../imgs/jpg/back5.jpg');
     position: fixed;
     top: 0px;
     left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
+    
 }
 
 .alert .alert-in{
     padding: 1.5em 2em;
     border-radius: 0.4em;
-    background-image: linear-gradient(var(--green-1), var(--green-2));
+    /* background-image: linear-gradient(var(--green-1), var(--green-2)); */
     color: white;
-    text-shadow: 0px 0px 3px var(--green-2);
-    box-shadow: 5px 5px 10px var(--green-2);
+    /* text-shadow: 0px 0px 3px ; */
+    /* box-shadow: 5px 5px 10px black; */
 }
 
 /* table */
@@ -264,8 +301,8 @@ body{
 }
 
 #div_table{
-    height: 100%;
-    /* min-height: 250px; */
+    max-height: 100%;
+    height: 350px;
     /* background-color: red; */
     width: 1000px;
     max-width: 90%;
@@ -353,9 +390,9 @@ g:hover > rect{
     position: fixed;
     bottom: 0.5em;
     right: 0.5em;
-    left: 0px;
+    /* left: 0px; */
     margin: auto;
-    width: 45px;
+    width: 50px;
     /* float: -1; */
     cursor: pointer;
 }

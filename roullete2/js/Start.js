@@ -10,10 +10,14 @@ setInterval(()=>{
     Roullete.animation()
     Ball.spin()
 
-    if( document.body.offsetWidth > document.body.offsetHeight )
+    
+    if( document.body.offsetWidth > document.body.offsetHeight ){
         rotate_mobile.style.display='none'
-    else
+        div_screen.removeAttribute('style')
+    }else{
         rotate_mobile.removeAttribute('style')
+        div_screen.style.display='none'
+    }
 
 
 },1000/60)

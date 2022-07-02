@@ -7,12 +7,11 @@ class User extends Connection{
         this.bet = 0
         this.choice = 0
         this.betsChoices = []
-        this.betsValues = []
+        this.historic_values = []
+        this.historic_earns = []
         this.numbersRoullete = []
-        this.earns = []
         this.quantity = 5
         this.maxBet = 0
-        this.won = false
         this.last_entry = 0
         this.next_entry = 0
     }
@@ -32,7 +31,7 @@ class User extends Connection{
     }
    
     getBetsValues(){
-        return this.betsValues.slice(-this.quantity)
+        return this.historic_values.slice(-this.quantity)
     }
 
     getBalance(){
@@ -40,7 +39,7 @@ class User extends Connection{
     }
 
     getEarns(){
-        return this.earns.slice(-this.quantity)
+        return this.historic_earns.slice(-this.quantity)
     }
 
     getBet(){
@@ -100,12 +99,36 @@ class User extends Connection{
         if(this.choice == 'to18') div_chosen.innerHTML = '1to18';
         if(this.choice == 'to36') div_chosen.innerHTML = '1to36';
     }
+
+    info(){
+
+        this.historic_choices   = this.historic_choices.slice(-this.quantity)
+        this.historic_earns     = this.historic_earns.slice(-this.quantity)
+        this.historic_roullete  = this.historic_roullete.slice(-this.quantity)
+        this.historic_values    = this.historic_values.slice(-this.quantity)
+        this.historic_victories = this.historic_victories.slice(-this.quantity)
+
+        return this.ret(
+            [
+                'id', 
+                'balance', 
+                'historic_choices', 
+                'historic_earns', 
+                'historic_roullete', 
+                'historic_values', 
+                'historic_victories', 
+                'maxBet', 
+                'name'
+            ]
+            )
+    }
 }
 
 let user = new User()
-// user.connect(2)
-user.setBalance(1000)
-user.setBetMax(50)
+user.connect(2)
+
+// user.setBalance(1000)
+// user.setBetMax(50)
 // user.send()
 
 

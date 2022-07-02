@@ -104,10 +104,11 @@ class Render{
                 render.message_win("Ganhou", this.toDollar(user.bet * game.porcentage[user.group]))
             }
 
-            user.betsChoices.push(user.choice)
-            user.betsValues.push(user.bet)
-            user.earns.push(user.add)
-            user.numbersRoullete.push(n)
+            user.historic_choices.push(user.choice)
+            user.historic_values.push(user.bet)
+            user.historic_roullete.push(n)
+            user.historic_earns.push(user.add)
+            user.historic_victories.push(user.won())
 
             user.setBet(0)
 

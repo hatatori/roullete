@@ -27,7 +27,16 @@ class Connection{
   
   async get(url){ return fetch(url).then(e=> e.json() ) }
   async post(url){ return fetch(url).then(e=> e.json() ) }
+
+  async save(e){
+    let a = await fetch(urlUser+this.id, {
+      method: 'PUT',
+      headers: {
+        'Content-type':"application/json"
+      },
+      body: JSON.stringify(this.info())
+    })
+    
+  }
 }
-
-
 

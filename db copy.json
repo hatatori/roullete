@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "maria",
+      "balance": 100000,
+      "historic_choices": ["st12","st12","st12","black"],
+      "historic_roullete": [100,100,100,30],
+      "historic_values": [100,100,100,0],
+      "historic_earns": [33,33,33,0],
+      "historic_victories": [true,true,true,false],
+      "maxBet": 500,
+      "a": 3
+    },
+    {
+      "id": 2,
+      "balance": 199889.6,
+      "historic_choices": ["to18","to18","to18","to18","to18"],
+      "historic_earns": [2.4,1.2,6,18,0],
+      "historic_roullete": [5,15,1,10,21],
+      "historic_values": [2,1,5,15,1],
+      "historic_victories": [true,true,true,true,false],
+      "maxBet": 500,
+      "name": "ana"
+    }
+  ],
+  "porcentage": {
+    "zero": 4,
+    "to18": 1.2,
+    "to36": 1.2,
+    "dozen1": 1.3,
+    "dozen2": 1.3,
+    "dozen3": 1.3,
+    "col1": 1.4,
+    "col2": 1.4,
+    "col3": 1.4,
+    "red": 1.1,
+    "black": 1.1,
+    "even": 1.2,
+    "odd": 1.2,
+    "number": 1
+  }
+}

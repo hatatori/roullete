@@ -127,8 +127,8 @@ class User extends Connection{
 let user = new User()
 user.connect(2)
 
-// user.setBalance(1000)
-// user.setBetMax(50)
+user.setBalance(10000)
+user.setBetMax(500)
 // user.send()
 
 

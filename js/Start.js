@@ -13,4 +13,4 @@ setInterval(()=>{
 
 // Roullete.choice(0)
 
-setInterval( () => { gameTime.check() } , 1000)
+// setInterval( () => { gameTime.check() } , 1000)

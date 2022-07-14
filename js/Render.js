@@ -104,11 +104,11 @@ class Render{
                 render.message_win("Ganhou", this.toDollar(user.bet * game.porcentage[user.group]))
             }
 
-            user.historic_choices.push(user.choice)
-            user.historic_values.push(user.bet)
-            user.historic_roullete.push(n)
-            user.historic_earns.push(user.add)
-            user.historic_victories.push(user.won())
+            // user.historic_choices.push(user.choice)
+            // user.historic_values.push(user.bet)
+            // user.historic_roullete.push(n)
+            // user.historic_earns.push(user.add)
+            // user.historic_victories.push(user.won())
 
             user.setBet(0)
 
@@ -116,21 +116,20 @@ class Render{
     }
 
     play(n){
-        
-        if(gameTime.dif1 <= 0){
-            this.message_information("Time limit over, go to next table")
-            return false
-        }
+        if(this.checkRoll())
+            this.roll(n)
+    }
 
+    checkRoll(){
         if(user.getBet() > user.getBetMax()){
             this.message_information("Above the value exceeded, value max "+user.getBetMax())
             return false
         }
-
-        if(this.coinsAdded.length == 0)
+        if(this.coinsAdded.length == 0){
             this.message_information("Empty table, bet some value")
-        else
-            this.roll(n)
+            return false
+        }
+        return true
     }
 
     showRoullete(){

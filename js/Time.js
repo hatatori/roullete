@@ -112,9 +112,8 @@ class GameTime{
     }
 }
 
-let gameTime = new GameTime()
-gameTime.renew( 5 , 10 )
-
+// let gameTime = new GameTime()
+// gameTime.renew( 5 , 10 )
 // gameTime.check()
 
 

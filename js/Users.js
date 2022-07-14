@@ -73,8 +73,8 @@ class User extends Connection{
         return this.maxBet
     }
 
-    setBetMax(){
-        this.maxBet = this.balance*5/100
+    setBetMax(maxBet){
+        this.maxBet = maxBet
     }
 
     get group(){
@@ -125,10 +125,10 @@ class User extends Connection{
 }
 
 let user = new User()
-user.connect(2)
+// user.connect(2)
 
-user.setBalance(10000)
-user.setBetMax(500)
+// user.setBalance(10000)
+// user.setBetMax(500)
 // user.send()
 
 

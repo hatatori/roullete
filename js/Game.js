@@ -5,6 +5,7 @@ class Game extends Connection{
 
         this.choice = {}
         this.choice.empty    = []
+        this.choice.all      = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,36]
         this.choice.zero     = [0]
         this.choice.to18     = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
         this.choice.to36     = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,36]
@@ -97,6 +98,6 @@ class Game extends Connection{
 }
 
 let game = new Game()
-game.setPorcentage()
+// game.setPorcentage()
 // connection = new Connection()
 // connection.connect(1)

@@ -12,8 +12,8 @@
 </head>
 <body>
 
-    <div class="absolute t-white top10 left10" id="div_t1">00:00:00</div>
-    <div class="absolute t-white top10 right10" id="div_t2">01:00:00</div>
+    <!-- <div class="absolute t-white top10 left10" id="div_t1">00:00:00</div> -->
+    <!-- <div class="absolute t-white top10 right10" id="div_t2">01:00:00</div> -->
 
     <div class="center-full">
         <div class="screen">
@@ -136,7 +136,8 @@
                         <div id="div_chosen" class="chosen chosen-red">36</div>
                         <p class="font-style-1" style="margin: 5px 0px">ESCOLHA</p>
                     </div>
-                    <div class="zoom" onclick="render.play(parseInt(Math.random()*36))">
+                    <!-- <div class="zoom" onclick="render.play(parseInt(Math.random()*36))"> -->
+                    <div id="button_play" class="zoom" onclick="con.go()">
                         <img src="imgs/svg/btn-play.svg" width="50px">    
                         <p class="font-style-1">PLAY</p>
                     </div>
@@ -194,6 +195,22 @@
     <script src="js/Time.js"></script>
     <script src="js/Start.js"></script>
 
+    <script>
+  
+
+        // fetch('https://homolog-api.livingsports.net/v1/auth/login/customer',{ 
+        //     method: 'POST',
+        //     headers: {"Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IjVkZTk0NGI5ZjJjNjA3OCJ9.eyJzdWIiOiIzYzA1YjhhNi0xZjgyLTRlMWItYjg4MS0xODI1OTdiNmIzYTEiLCJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE2NTc3NjIzMDcsImV4cCI6MTY2MDM1NDMwNywianRpIjoiZGJhOWNmODE0NTc5N2Y1IiwiaWQiOiIzYzA1YjhhNi0xZjgyLTRlMWItYjg4MS0xODI1OTdiNmIzYTEiLCJuYW1lIjoiTGl2aW5nIE9maWNpYWwiLCJ1c2VybmFtZSI6ImxpdmluZ29maWNpYWwiLCJncm91cCI6IkNVU1RPTUVSIiwiY3JlYXRlZEF0IjoiMjAyMi0wNy0xM1QyMjozMTo0Ny0wMzowMCIsImluZGljYXRpb25Db2RlIjoibGl2aW5nb2ZpY2lhbCIsImlzQWN0aXZlIjp0cnVlLCJpbXBlcnNvbmF0ZSI6ZmFsc2UsImNvbXBhbnkiOnsiaWQiOiIxNmU2ODNhMi0zMzUwLTRhNmYtYWJjZC1lNTAzOTRhMTk3OWMiLCJuYW1lIjoiTGl2aW5nIFNwb3J0cyIsIm1pbmltdW1XaXRoZHJhd2FsQW1vdW50IjoxNTAsIndpdGhkcmF3YWxJbnRlcnZhbERheXMiOjAsIndpdGhkcmF3YWxEYXlzIjpbIjkiLCIxMCIsIjExIiwiMTUiLCIyMyIsIjI1IiwiMzAiXSwicGl4Ijp7ImtleSI6IjQ2NjI1OTI4MDAwMTYyIiwiaW52b2ljZUxpZmV0aW1lIjoxNDQwLCJpZCI6IiJ9LCJiaXRjb2luIjp7IndhbGxldCI6ImJjMXF5azBnODI5amU2cGYzM3hoanp0OWRkNWVjcnphdXF1OWs2eDg2OSIsImludm9pY2VMaWZldGltZSI6MzAsImlkIjoiIn0sInVzZHQiOnsid2FsbGV0IjoiVFdSNTc4Yk5vRTU5S3Y1ZFdQSjVzYzllV0gyZnpmSzl2QiIsImludm9pY2VMaWZldGltZSI6MzAsImlkIjoiIn0sIndoYXRzYXBwIjp7InN1cHBvcnRQaG9uZSI6Iis1NTExOTM0NjQ1MDUxIiwic3VwcG9ydFRleHQiOiJPbFx1MDBlMSwgdm9jXHUwMGVhIHBvZGVyaWEgdGlyYXIgdW1hIGRcdTAwZmF2aWRhPyIsInN1cHBvcnRHcm91cFVybCI6IiIsImlkIjoiIn19fQ.9081-io-wr3cs61bEsVRJ-_SYbCPr4vJjrcaVDxwCj8"},
+        //     body: JSON.stringify( {"username":"livingoficial","password":"xuxu2022@@@"} )  
+        // }).then(e=>{
+        //     console.log(e.json())
+        // })
+
+        // fetch('https://homolog-api.livingsports.net/v1/roulette/player-history').then(e=>{
+        //     console.log(e.json())
+        // })
+
+    </script>
 
 </body>
 </html>

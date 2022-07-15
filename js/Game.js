@@ -5,7 +5,7 @@ class Game extends Connection{
 
         this.choice = {}
         this.choice.empty    = []
-        this.choice.all      = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,36]
+        this.choice.all      = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,36]
         this.choice.zero     = [0]
         this.choice.to18     = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
         this.choice.to36     = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,34,35,36]
@@ -35,6 +35,24 @@ class Game extends Connection{
         this.porcentage.even     = 1.2
         this.porcentage.odd      = 1.2
         this.porcentage.number   = 1
+
+        this.betTypes = {
+            zero:   'Zero',
+            to18:   'Números Menores (1 a 18)',
+            to36:   'Números Maiores (19 a 36)',
+            dozen1: '1ª Dúzia',
+            dozen2: '1ª Dúzia',
+            dozen3: '1ª Dúzia',
+            col1:   '1ª Corredor (1 a 12)',
+            col2:   '2ª Corredor (13 a 24)',
+            col3:   '3ª Corredor (25 a 36)',
+            red:    'Cor Vermelha',
+            black:  'Cor Preta',
+            even:   'Número Par',
+            odd:    'Número Ímpar',
+            number: 'Acerto por Número',
+        } 
+        
     }
     
 

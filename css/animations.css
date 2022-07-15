@@ -107,6 +107,7 @@
 .rotate-7{animation: rotate 5s infinite linear;}
 .rotate-8{animation: rotate 5.5s infinite linear;}
 .rotate-9{animation: rotate 6s infinite linear;}
+.rotate-fast{animation: rotate 1s infinite linear;}
 
 
 .hover\:rotate-180:hover{transform: rotate(180deg);}
@@ -164,6 +165,31 @@
 .-ty30{transform: translateY(-30%);}
 .-ty40{transform: translateY(-40%);}
 .-ty50{transform: translateY(-50%);}
+
+
+.tx0{transform: translateY(0%);}
+.tx10{transform: translateY(10%);}
+.tx20{transform: translateY(20%);}
+.tx30{transform: translateY(30%);}
+.tx40{transform: translateY(40%);}
+.tx50{transform: translateY(50%);}
+.tx60{transform: translateY(60%);}
+.tx70{transform: translateY(70%);}
+.tx80{transform: translateY(80%);}
+.tx90{transform: translateY(90%);}
+.tx100{transform: translateY(100%);}
+
+.-tx0{transform: translateX(0%);}
+.-tx10{transform: translateX(-10%);}
+.-tx20{transform: translateX(-20%);}
+.-tx30{transform: translateX(-30%);}
+.-tx40{transform: translateX(-40%);}
+.-tx50{transform: translateX(-50%);}
+.-tx60{transform: translateX(-60%);}
+.-tx70{transform: translateX(-70%);}
+.-tx80{transform: translateX(-80%);}
+.-tx90{transform: translateX(-90%);}
+.-tx100{transform: translateX(-100%);}
 
 
 

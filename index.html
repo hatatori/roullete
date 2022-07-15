@@ -12,8 +12,38 @@
 </head>
 <body>
 
-    <!-- <div class="absolute t-white top10 left10" id="div_t1">00:00:00</div> -->
+    <div class="absolute t-white top10 left10" id="div_t1"></div>
     <!-- <div class="absolute t-white top10 right10" id="div_t2">01:00:00</div> -->
+
+    <section id="loading_div" class="loading">
+        <div class="loading-in">
+            <div>Carregando</div>
+            <div>
+                <img src="imgs/png/logo2.png" width="100%">
+            </div>
+            <div class="circle_loading rotate-fast"></div>
+        </div>
+    </section>
+
+    <section class="menu-historic transition" id="menu_historic" onclick="render.menuhistoric()" style="opacity: 0; pointer-events: none;"> 
+        <div class="menu-historic-player transition" id="menu_historic_player" style="transform: translateX(-100%)">
+            <h3 class="flex j-between">Histórico <span onclick="render.menuhistoric()">x</span></h3>
+            <div class="multiples" id="multiple">
+                <!-- item -->
+                <!-- <div class="item">
+                    <div class="flex i-center gap-1em">
+                        <span class="p-win">❌</span>
+                        <div>
+                            <div class="p-choice">Números Menores (1 a 18)</div>
+                            <div class="p-val">Valor: R$ 10</div>
+                            <div class="p-rol">Roleta: 20</div>
+                        </div>
+                    </div>
+                    <p class="p-val">+ R$ 20</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
 
     <div class="center-full">
         <div class="screen">
@@ -173,11 +203,11 @@
                 <div class="footer-end">
                     <div class="left">
                         <p class="t-blue-1">SEU SALDO</p>
-                        <h1 id="div_balance" class="t-gray-1">U$ 500,00</h1>
+                        <h1 id="div_balance" class="t-gray-1">R$ 500,00</h1>
                     </div>
                     <div class="right">
                         <p class="t-blue-1">APOSTA</p>
-                        <h1 id="div_bet" class="t-gray-1">U$ 0,00</h1>
+                        <h1 id="div_bet" class="t-gray-1">R$ 0,00</h1>
                     </div>
                 </div>
             </footer>
@@ -185,12 +215,14 @@
     </div>
 
     <img onclick="render.menuShow()" id="btn_float_menu" src='imgs/svg/btn-menu.svg'>
+    
+    <img onclick="render.menuhistoric()" id="btn_float_menu2" src='imgs/svg/btn-history.svg'>
 
     <script src="js/js.js"></script>
-    <script src="js/Connection.js"></script>
     <script src="js/Objects.js"></script>
-    <script src="js/Game.js"></script>
     <script src="js/Render.js"></script>
+    <script src="js/Connection.js"></script>
+    <script src="js/Game.js"></script>
     <script src="js/Users.js"></script>
     <script src="js/Time.js"></script>
     <script src="js/Start.js"></script>

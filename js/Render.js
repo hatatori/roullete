@@ -14,6 +14,7 @@ class Render{
                 this.menuShow()
             }
         }
+
     }
     
     message_information(txt){
@@ -74,6 +75,24 @@ class Render{
         historic.insertBefore(div, historic.firstChild);
     }
 
+    historicplayerAdd(color, choice, value, valuerol, profit){
+        let simbol = (color == 'GREEN') ? '✔️' : '❌'
+        let div = document.createElement('div')
+        div.className = 'item'
+        div.innerHTML = `
+            <div class="flex i-center gap-1em">
+                <span class="p-win">${simbol}</span>
+                <div>
+                    <div class="p-choice">${choice}</div>
+                    <div class="p-val">Valor: R$ ${value}</div>
+                    <div class="p-rol">Roleta: ${valuerol}</div>
+                </div>
+            </div>
+            <p class="p-val ${color}">R$ ${profit}</p>
+        `
+        multiple.appendChild(div)
+    }
+
     roll(n){
         this.showRoullete()
         this.rotateRandomPosition()
@@ -97,20 +116,21 @@ class Render{
             user.add = 0
             user.earn = 0
 
+            user.last.profit = user.bet*-1
+
             if(user.won()){
                 user.add = user.bet * game.porcentage[user.group]
                 user.earn = user.balance + user.bet + user.add
                 user.setBalance(user.earn)
                 render.message_win("Ganhou", this.toDollar(user.bet * game.porcentage[user.group]))
+                user.last.profit = user.add
             }
 
-            // user.historic_choices.push(user.choice)
-            // user.historic_values.push(user.bet)
-            // user.historic_roullete.push(n)
-            // user.historic_earns.push(user.add)
-            // user.historic_victories.push(user.won())
+            render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
 
             user.setBet(0)
+        
+            button_play.style.pointerEvents = 'auto'
 
         },8*1000)
     }
@@ -120,15 +140,28 @@ class Render{
             this.roll(n)
     }
 
+    checkButtonPlay(test = true){
+        // if(this.coinsAdded.length > 0 && test){
+        //     button_play.style.pointerEvents = 'auto'
+        //     button_play.style.opacity = 1
+        // }else{
+        //     button_play.style.pointerEvents = 'none'
+        //     button_play.style.opacity = 0.5
+        // }
+    }
+
     checkRoll(){
+        
         if(user.getBet() > user.getBetMax()){
             this.message_information("Above the value exceeded, value max "+user.getBetMax())
             return false
         }
+
         if(this.coinsAdded.length == 0){
             this.message_information("Empty table, bet some value")
             return false
         }
+
         return true
     }
 
@@ -201,6 +234,7 @@ class Render{
         },1000)
 
         this.coinsAdded.push(coins_left.lastChild)
+
     }
 
     coinRemoveLast(){
@@ -260,14 +294,42 @@ class Render{
         footer.classList.remove('ty100')
         footer.classList.add('ty0')
         div_table.style.transition='0.5s'
-
         div_table.classList.add('-ty10')
     }
+    
 
     menuHide(){
         footer.classList.remove('ty0')
         footer.classList.add('ty100')
         div_table.classList.remove('-ty10')
+    }
+
+    menuhistoric(){
+
+        menu_historic_player.onclick=function(e){
+            e.stopPropagation()
+        }
+
+        if(!menu_historic.state)
+            menu_historic.state = false
+        
+        menu_historic.state = !menu_historic.state
+
+
+        if(menu_historic.state){
+            menu_historic.style.opacity = 1
+            menu_historic_player.style.transform = 'translateX(0%)'
+            menu_historic.style.pointerEvents = 'auto'
+        }
+        
+        if(!menu_historic.state){
+            menu_historic.style.opacity = 0
+            menu_historic_player.style.transform = 'translateX(-100%)'
+            menu_historic.style.pointerEvents = 'none'
+        }
+
+        
+
     }
 
     choiceBet(n){

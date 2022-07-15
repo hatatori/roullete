@@ -205,13 +205,23 @@ g:hover > rect{
 .chosen-green{background-color: #133d19; border: solid 4px #347e32;}
 
 /* float menu */
-#btn_float_menu{
+#btn_float_menu, #btn_float_menu2{
     position: fixed;
     bottom: 0.5em;
     right: 0.5em;
     width: 60px;
     /* float: -1; */
     cursor: pointer;
+}
+
+#btn_float_menu2{
+    bottom: 0.5em;
+    left: 0.5em;
+    box-shadow: 0px 0px 0px 3px #356825;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 0.3em;
 }
 
 #coins_left{
@@ -264,4 +274,129 @@ g:hover > rect{
 .historic .ball{color: #00000055; color: white;}
 .historic .ball-red{background: linear-gradient(#a90015, #6d000a)}
 .historic .ball-black{background: linear-gradient(#383934, #141311)}
+.historic .ball-green{background: linear-gradient(90deg, #022813 , #356825);}
 
+.loading{
+    background-image: linear-gradient(90deg, #022813 , #356825);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-in{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+.circle_loading{
+    width: 50px;
+    height: 50px;
+    border-bottom: solid 3px white;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.menu-historic{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    z-index: 3;
+    background-color: #00000055;
+    
+    z-index: 3;
+}
+
+.menu-historic-player{
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+     */
+     height: 100vh;
+    width: 340px;
+    max-width: 100%;
+    /* background-image: linear-gradient(90deg, #022813 , #356825); */
+    /* background-color: #022813;
+    background-color: #356825; */
+    background-color: #222222;
+    
+    padding: 1em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow: auto;
+    box-shadow: 0px 0px 1em #00000099;
+}
+
+.menu-historic-player > .multiples{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 1em;
+    flex-direction: column-reverse;
+}
+
+.menu-historic-player::-webkit-scrollbar{
+    background-color: #00000055;
+    width: 5px;
+}
+
+.menu-historic-player::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+.menu-historic-player::-webkit-scrollbar-thumb{
+    background-color: #ffffff33;
+    border-radius: 10px;
+    /* border: 3px solid #00000055; */
+}
+
+.menu-historic-player .item{
+    border: 1px solid #FFFFFF55;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px black;
+    padding: 0.5em 1em;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1em;
+    background: url(../imgs/jpg/back_wood_2.jpg);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-historic-player .item *{
+    font-weight: 100;
+    text-shadow: 1px 1px black;
+    font-size: small
+}
+
+.menu-historic-player .item .GREEN{
+    font-weight: bold;
+    color: lime;
+}
+
+.menu-historic-player .item .RED{
+    font-weight: bold;
+    color: #f44336;
+    text-shadow: 0px 0px 4px black;
+}
+
+.menu-historic-player .item .p-val{
+    justify-self: flex-end;
+}

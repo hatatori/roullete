@@ -150,6 +150,16 @@
 .gap-8{gap: 80px;}
 .gap-9{gap: 90px;}
 
+.gap-1em{gap: 1em;}
+.gap-2em{gap: 2em;}
+.gap-3em{gap: 3em;}
+.gap-4em{gap: 4em;}
+.gap-5em{gap: 5em;}
+.gap-6em{gap: 6em;}
+.gap-7em{gap: 7em;}
+.gap-8em{gap: 8em;}
+.gap-9em{gap: 9em;}
+
 .-ty10p{transform: translateY(-10%);}
 .-ty20p{transform: translateY(-20%);}
 .-ty30p{transform: translateY(-30%);}
@@ -356,6 +366,10 @@
 .ce-r37{ grid-column-end: 37; }
 .ce-r38{ grid-column-end: 38; }
 .ce-r39{ grid-column-end: 39; }
+
+.pointer-events-none{
+    pointer-events: none;
+}
 
 .border-b-none{border-bottom: none;}
 .border-t-none{border-top: none;}

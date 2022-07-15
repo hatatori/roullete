@@ -30,7 +30,7 @@ class Render{
         let div = document.createElement('div')
         div.innerHTML = `
         <div class="alert fade-in">
-            <div class="alert-in zoom-in">
+            <div class="alert-in zoom-in bg-fireworks" style="background: url(imgs/gif/fireworks.gif); background-size: cover;">
                 <p>${txt1}</p>
                 <h1>${txt2}</h1>
             </div>
@@ -44,6 +44,8 @@ class Render{
             div.onanimationend = () => div.remove()
         },3*1000)
 
+        let audio = new Audio('mp3/jewel.mp3')
+        audio.play()
     }
 
     rotateRandomPosition(){
@@ -122,14 +124,14 @@ class Render{
                 user.add = user.bet * game.porcentage[user.group]
                 user.earn = user.balance + user.bet + user.add
                 user.setBalance(user.earn)
-                render.message_win("Ganhou", this.toDollar(user.bet * game.porcentage[user.group]))
+                render.message_win("Parabéns", "Você ganhou R$ "+this.toDollar(user.bet * game.porcentage[user.group]))
                 user.last.profit = user.add
             }
 
             render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
-
+            
             user.setBet(0)
-        
+            
             button_play.style.pointerEvents = 'auto'
 
         },8*1000)
@@ -153,12 +155,12 @@ class Render{
     checkRoll(){
         
         if(user.getBet() > user.getBetMax()){
-            this.message_information("Above the value exceeded, value max "+user.getBetMax())
+            this.message_information("Excedeu o valor, valor máximo "+user.getBetMax())
             return false
         }
 
         if(this.coinsAdded.length == 0){
-            this.message_information("Empty table, bet some value")
+            this.message_information("Aposta vazia, lance algum valor")
             return false
         }
 
@@ -181,7 +183,7 @@ class Render{
     coinAdd(value){
 
         if( user.balance - value < 0 ){
-            this.message_information("Insufficient Balance")
+            this.message_information("Caixa insuficiente")
             return false
         }
 
@@ -343,7 +345,7 @@ class Render{
     }
 
     toDollar(value){
-        return `U$ ${value.toFixed(2).replace(/\./g,",")}`
+        return `R$ ${value.toFixed(2).replace(/\./g,",")}`
     }
 
 }

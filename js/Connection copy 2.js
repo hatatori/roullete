@@ -11,6 +11,7 @@ class Connection{
     this.password = "xuxu2022@@@"
     this.id = 'a28c6d52-c2b5-41fc-a182-7a535b810420'
     this.companyId = '16e683a2-3350-4a6f-abcd-e50394a1979c'
+    
 
   }
 
@@ -54,7 +55,6 @@ class Connection{
 
   // a28c6d52-c2b5-41fc-a182-7a535b810420
   // con.bet(50,'3d42ee1b-757e-41ca-a8a1-45bcc3ac2ef6',12)
-
   bet(value, bettype, num){
     fetch(url_jogar, {
       method: 'POST',
@@ -82,17 +82,48 @@ class Connection{
       },
       body: JSON.stringify({'number':num})
     })
+    .then(e=>{
+      // console.log(e.json())
+    }).catch(e=>{
+      console.log('erro')
+    })
   }
 
   
   historicRoulette(){
-    for(let i of this.dataroulette.data.rouletteHistory)
+    // fetch(`https://homolog-api.livingsports.net/v1/roulette/history`,{
+    //   headers:{
+    //     'company-id': this.companyId,
+    //     'content-type': 'application/json',
+    //     'Authorization': "Bearer "+this.token,
+    //   }
+    // }).then(e=>{
+    //   return e.json()
+    // }).then(e=>{
+    //   for(let i of e.data){
+    //     render.historicAdd(i.number)
+    //   }
+    // })
+
+    for(let i of this.dataroulette.data.rouletteHistory){
       render.historicAdd(i.number)
+    }
+
+    // console.log(this.dataroulette.data.rouletteHistory)
   }
 
   historicplayer(){
-    for(let i of this.dataroulette.data.playerHistory)
-      render.historicplayerAdd(i.result, i.betType.name, i.betAmount, i.rouletteNumber, i.profit)
+    // fetch('https://homolog-api.livingsports.net/v1/roulette/player-history',{method:'GET',headers:{'company-id': this.companyId,'content-type': 'application/json','Authorization': "Bearer "+this.token,}})
+    // .then(e=>{
+    //   return e.json()
+    // }).then(e=>{
+    //   this.obj = e
+    //   for(let i of this.obj.data){
+    //     render.historicplayerAdd(i.result, i.betType.name, i.betAmount, i.rouletteNumber, i.profit)
+    //   }
+    // })
+
+    console.log(this.dataroulette)
   }
 
   go(){
@@ -129,13 +160,13 @@ class Connection{
       let list_num_u = 0 
 
       if(e.data.result == 'RED'){
+        
         console.log('red')
 
         if(!isNaN(parseInt(user.choice)))
           list_num = Array.sub(game.choice.all,[parseInt(user.choice)]) //se for número
         else
           list_num = Array.sub(game.choice.all, game.choice[user.choice]) //se for grupo
-        
         let rand = Math.rand(0,list_num.length-1)
         list_num_u = list_num[rand]
         render.play(list_num_u)

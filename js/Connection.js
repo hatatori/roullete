@@ -195,9 +195,9 @@ class Connection{
         profit: e.data.betProfit
       }
 
-      console.log("cor: "+e.data.result)
-      console.log("profit: "+e.data.betProfit)
-      
+      // console.log("cor: "+e.data.result)
+      // console.log("profit: "+e.data.betProfit)
+
       render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
 
       // render.historicplayerAdd(e.data.result, game.betTypes[user.group], user.bet, list_num_u, user.add)

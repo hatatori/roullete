@@ -80,6 +80,7 @@ class Render{
     }
 
     historicplayerAdd(color, choice, value, valuerol, profit){
+        console.log("v-profit: "+profit)
         let simbol = (color == 'GREEN') ? '✔️' : '❌'
         let div = document.createElement('div')
         div.className = 'item'
@@ -128,16 +129,16 @@ class Render{
             user.profit = (user.bet * -1)
 
             if(user.won()){
-                user.add = user.bet * game.porcentage[user.group]
-                user.earn = user.balance + user.bet + user.add
-                user.setBalance(user.earn)
-                render.message_win("Parabéns", "Você ganhou R$ "+this.toDollar(user.bet * game.porcentage[user.group]))
-                user.profit = user.bet * game.porcentage[user.group]
+                // user.add = user.bet * game.porcentage[user.group]
+                // user.earn = user.balance + user.bet + user.add
+                user.setBalance(user.balance + user.bet + user.last.profit)
+                // render.message_win("Parabéns", "Você ganhou R$ "+this.toDollar(user.bet * game.porcentage[user.group]))
+                render.message_win("Parabéns", "Você ganhou "+this.toDollar(user.last.profit))
+                // user.profit = user.bet * game.porcentage[user.group]
             }
 
-            user.profit = user.profit.toFixed(2).replace('.',',')
-
-            render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.profit)
+            // user.profit = user.profit.toFixed(2).replace('.',',')
+            // render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.profit)
             
             user.setBet(0)
             

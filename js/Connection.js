@@ -7,28 +7,33 @@ const url_historico_roleta = 'https://homolog-api.livingsports.net/v1/roulette/h
 class Connection{
 
   constructor(){
-    this.email = "livingoficial"
-    this.password = "xuxu2022@@@"
+    // this.email = "livingoficial"
+    // this.password = "xuxu2022@@@"
     this.id = 'a28c6d52-c2b5-41fc-a182-7a535b810420'
     this.companyId = '16e683a2-3350-4a6f-abcd-e50394a1979c'
+
+    this.email = "testeroleta"
+    this.password = "123456"
 
   }
 
   async connect(){
     
     // autenticação
-    if(localStorage.token == undefined){
+    // if(localStorage.token == undefined){
       let auth = await fetch(url_antenticacao, { method:'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({"username":this.email, "password":this.password}) })
       let auth_obj = await auth.json()
       this.token = auth_obj.data.token
       localStorage.setItem('token', this.token)
-    }
+    // }
 
     this.token = localStorage.token
 
     // dados da roleta
     let roulette = await fetch(url_abrir_roleta, {method: 'POST',headers: {'Content-Type':'application/json','Authorization': "Bearer "+this.token,'company-id': this.companyId}})
     let roulette_json = await roulette.json()
+
+    // console.log(roulette_json)
     
     this.dataroulette = roulette_json
     this.id = roulette_json.data.id
@@ -72,27 +77,40 @@ class Connection{
     })
   }
 
-  register(num){
-    fetch(`https://homolog-api.livingsports.net/v1/roulette/${this.id}/register-number`,{
-      method: 'POST',
-      headers:{
-        'company-id': this.companyId,
-        'content-type': 'application/json',
-        'Authorization': "Bearer "+this.token,
-      },
-      body: JSON.stringify({'number':num})
-    })
+  register(id,num){
+    // fetch(`https://homolog-api.livingsports.net/v1/roulette/${this.id}/register-number`,{
+    //   method: 'POST',
+    //   headers:{
+    //     'company-id': this.companyId,
+    //     'content-type': 'application/json',
+    //     'Authorization': "Bearer "+this.token,
+    //   },
+    //   body: JSON.stringify({'number':num})
+    // })
+
+    fetch(`https://homolog-api.livingsports.net/v1/roulette/${id}/register-number`,{
+        method:'POST',
+        headers:{
+          'company-id': this.companyId,
+          'content-type': 'application/json',
+          'Authorization': "Bearer "+this.token,
+        },
+        body: JSON.stringify({number:num})
+      })
   }
 
   
   historicRoulette(){
-    for(let i of this.dataroulette.data.rouletteHistory)
-      render.historicAdd(i.number)
+    for(let i of this.dataroulette.data.playerHistory)
+      render.historicAdd(i.rouletteNumber)
   }
 
   historicplayer(){
-    for(let i of this.dataroulette.data.playerHistory)
+    for(let i of this.dataroulette.data.playerHistory){
       render.historicplayerAdd(i.result, i.betType.name, i.betAmount, i.rouletteNumber, i.profit)
+      console.log(i)
+    }
+      
   }
 
   go(){
@@ -112,6 +130,21 @@ class Connection{
     button_play.style.pointerEvents = 'none'
 
     // render.checkButtonPlay(false)
+    let obj = {}
+
+    if(user.group != 'empty'){
+      obj = {
+        betAmount:user.bet,
+        betType:con.dataroulette.data.betTypes.find(e=>e.name==game.betTypes[user.group]).id,
+        number: null
+      }
+    }else{
+      obj = {
+        betAmount:user.bet,
+        betType:con.dataroulette.data.betTypes.find(e=>e.name==game.betTypes[user.group]).id,
+        number: parseInt(user.choice)
+      }
+    }
 
     fetch(url_jogar,{
       method:'POST',
@@ -119,7 +152,8 @@ class Connection{
         'company-id': this.companyId,
         'content-type': 'application/json',
         'Authorization': "Bearer "+this.token,
-      }
+      },
+      body: JSON.stringify(obj)
     }).then(e=>{ 
       return e.json() 
     }).then(e=>{ 
@@ -139,9 +173,6 @@ class Connection{
         list_num_u = list_num[rand]
         render.play(list_num_u)
 
-        
-
-        
       }
 
       if(e.data.result == 'GREEN'){
@@ -161,15 +192,35 @@ class Connection{
         group: game.betTypes[user.group], 
         valor: user.bet, 
         rou: list_num_u, 
-        profit: user.add
+        profit: e.data.betProfit
       }
 
+      console.log("cor: "+e.data.result)
+      console.log("profit: "+e.data.betProfit)
+      
+      render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
 
       // render.historicplayerAdd(e.data.result, game.betTypes[user.group], user.bet, list_num_u, user.add)
 
-      con.register(list_num_u)
+      con.register(e.data.id , list_num_u)
+      // console.log(e.data.id)
+      // console.log(list_num_u)
+
+      // console.log(e)
+      // console.log(e.data)
+      // console.log(e.data.id)
+      // obj.betType
+      // fetch(`https://homolog-api.livingsports.net/v1/roulette/${e.data.id}/register-number`,{
+      //   method:'POST',
+      //   headers:{
+      //     'company-id': this.companyId,
+      //     'content-type': 'application/json',
+      //     'Authorization': "Bearer "+this.token,
+      //   }
+      // })
 
       button_play.removeAttribute('style')
+
     })
   }
 }

@@ -90,7 +90,7 @@ class Render{
                 <div>
                     <div class="p-choice">${choice}</div>
                     <div class="p-val">Valor: R$ ${value}</div>
-                    <div class="p-rol">Roleta: ${valuerol}</div>
+                    <div class="p-rol">Resultado: ${valuerol}</div>
                 </div>
             </div>
             <p class="p-val ${color}">R$ ${profit}</p>
@@ -133,7 +133,7 @@ class Render{
                 // user.earn = user.balance + user.bet + user.add
                 user.setBalance(user.balance + user.bet + user.last.profit)
                 // render.message_win("Parabéns", "Você ganhou R$ "+this.toDollar(user.bet * game.porcentage[user.group]))
-                render.message_win("Parabéns", "Você ganhou "+this.toDollar(user.last.profit))
+                render.message_win("Parabéns", "Você ganhou "+this.toDollar(user.last.profit + user.bet))
                 // user.profit = user.bet * game.porcentage[user.group]
             }
 

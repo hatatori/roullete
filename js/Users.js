@@ -5,7 +5,7 @@ class User extends Connection{
         this.name = name
         this.balance = 0
         this.bet = 0
-        this.choice = 0
+        this.choice = 1
         this.betsChoices = []
         this.historic_values = []
         this.historic_earns = []
@@ -66,7 +66,7 @@ class User extends Connection{
     }
 
     toDollar(v){
-        return `U$ ${Number(v).toFixed(2).replace(/\./g,",")}`
+        return `R$ ${Number(v).toFixed(2).replace(/\./g,",")}`
     }
 
     getBetMax(){

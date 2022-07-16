@@ -50,11 +50,9 @@ class Game extends Connection{
             black:  'Cor Preta',
             even:   'Número Par',
             odd:    'Número Ímpar',
-            number: 'Acerto por Número',
+            empty:  'Acerto por Número',
         } 
-        
     }
-    
 
     getGroupNumber(n){
         let group_number = []

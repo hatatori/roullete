@@ -6,9 +6,13 @@ let render = new Render()
 
 // let gameTime = new GameTime(10, 60 * 60 * 2 )
 
+
+
+
 setInterval(()=>{
     Roullete.animation()
     Ball.spin()
+    render.checkButtonPlay()
 },1000/60)
 
 // Roullete.choice(0)

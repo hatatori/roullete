@@ -4,6 +4,8 @@ class Render{
         this.coinsToRemove = []
         this.coinsAdded = []
 
+        this.btnplayactive = true
+
         this.squares = [...document.querySelectorAll('[n]')]
 
         for(let el of this.squares){
@@ -96,6 +98,9 @@ class Render{
     }
 
     roll(n){
+
+        this.btnplayactive = true
+
         this.showRoullete()
         this.rotateRandomPosition()
 
@@ -110,6 +115,8 @@ class Render{
             // this.menuHide()
         },5000)
 
+        
+
         setTimeout(()=>{
             this.hideRoullete()
             this.coinClean()
@@ -118,17 +125,19 @@ class Render{
             user.add = 0
             user.earn = 0
 
-            user.last.profit = user.bet*-1
+            user.profit = (user.bet * -1)
 
             if(user.won()){
                 user.add = user.bet * game.porcentage[user.group]
                 user.earn = user.balance + user.bet + user.add
                 user.setBalance(user.earn)
                 render.message_win("Parabéns", "Você ganhou R$ "+this.toDollar(user.bet * game.porcentage[user.group]))
-                user.last.profit = user.add
+                user.profit = user.bet * game.porcentage[user.group]
             }
 
-            render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
+            user.profit = user.profit.toFixed(2).replace('.',',')
+
+            render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.profit)
             
             user.setBet(0)
             
@@ -140,16 +149,18 @@ class Render{
     play(n){
         if(this.checkRoll())
             this.roll(n)
+        
+        
     }
 
-    checkButtonPlay(test = true){
-        // if(this.coinsAdded.length > 0 && test){
-        //     button_play.style.pointerEvents = 'auto'
-        //     button_play.style.opacity = 1
-        // }else{
-        //     button_play.style.pointerEvents = 'none'
-        //     button_play.style.opacity = 0.5
-        // }
+    checkButtonPlay(){
+        if(this.coinsAdded.length > 0 && this.btnplayactive){
+            button_play.style.pointerEvents = 'auto'
+            button_play.style.opacity = 1
+        }else{
+            button_play.style.pointerEvents = 'none'
+            button_play.style.opacity = 0.1
+        }
     }
 
     checkRoll(){

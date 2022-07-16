@@ -107,10 +107,9 @@ class Connection{
     if(render.checkRoll() == false){
       return false
     }
-    
+
     render.message_information(phrases[Math.rand(0,3)])
     button_play.style.pointerEvents = 'none'
-    
 
     // render.checkButtonPlay(false)
 
@@ -139,6 +138,10 @@ class Connection{
         let rand = Math.rand(0,list_num.length-1)
         list_num_u = list_num[rand]
         render.play(list_num_u)
+
+        
+
+        
       }
 
       if(e.data.result == 'GREEN'){
@@ -148,6 +151,9 @@ class Connection{
         else
           list_num_u = game.choice[user.choice][parseInt(Math.random()*game.choice[user.choice].length-1)]
           render.play(list_num_u)
+
+        console.log(list_num)
+        console.log(list_num_u)
       }
 
       user.last = {
@@ -158,7 +164,10 @@ class Connection{
         profit: user.add
       }
 
+
       // render.historicplayerAdd(e.data.result, game.betTypes[user.group], user.bet, list_num_u, user.add)
+
+      con.register(list_num_u)
 
       button_play.removeAttribute('style')
     })

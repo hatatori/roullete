@@ -23,11 +23,41 @@ class Connection{
     // if(localStorage.token == undefined){
       let auth = await fetch(url_antenticacao, { method:'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({"username":this.email, "password":this.password}) })
       let auth_obj = await auth.json()
-      this.token = auth_obj.data.token
-      localStorage.setItem('token', this.token)
+      // this.token = auth_obj.data.token
+      // localStorage.setItem('token', this.token)
     // }
 
-    this.token = localStorage.token
+    // localStorage.setItem('token', window.location.search.split('=')[1])
+    // this.token = localStorage.token
+
+
+    // this.token = window.location.search.split('=')[1]
+
+    if(window.location.search[1] == 't'){
+      localStorage.setItem('token', window.location.search.split('=')[1])
+      window.location.href = window.location.origin
+    }
+
+    if(localStorage.token)
+      this.token = localStorage.token
+    
+    if(this.token){
+      setTimeout(()=>{localStorage.removeItem('token')},100)
+    }else{
+      render.error()
+    }
+      
+
+    // this.token = localStorage.token
+    // localStorage.removeItem('token')
+
+    
+
+
+    
+
+    // this.token = window.location.search.split('=')[1]
+
 
     // dados da roleta
     let roulette = await fetch(url_abrir_roleta, {method: 'POST',headers: {'Content-Type':'application/json','Authorization': "Bearer "+this.token,'company-id': this.companyId}})
@@ -153,7 +183,7 @@ class Connection{
     // console.log(user.group)
     // console.log(game.betTypes[user.group])
     // console.log(obj.betType)
-    console.log(obj)
+    // console.log(obj)
     // console.log(con.dataroulette.data.betTypes.find(e=>game.betTypes[user.group]))
     // console.log(con.dataroulette.data.betTypes.find(e=>e.name==game.betTypes[user.group]).id)
 
@@ -175,7 +205,7 @@ class Connection{
       // console.log(e)
       // console.log(e.status)
 
-      console.log(e)
+      // console.log(e)
 
       // console.log('->')
       // console.log(e)

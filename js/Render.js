@@ -71,13 +71,22 @@ class Render{
         all.map(e=>e.style.removeProperty('opacity'))
     }
 
+    error(){
+        document.body.innerHTML = `
+        <div class='screen'>
+        <div class="absolute t-white top10 left10">Não pode jogar, sem o devido acesso</div>
+        </div>
+        <div id='button_play'></div>
+        `
+        return false
+    }
+
     toMoney(num){
 
         function reverse(str){
             return str.split('').reverse().join('')
         }
         
-        console.log(num)
         let n = num
         n = n.toString()
 

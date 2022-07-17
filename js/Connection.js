@@ -140,13 +140,24 @@ class Connection{
         betType:con.dataroulette.data.betTypes.find(e=>e.name==game.betTypes[user.group]).id,
         number: null
       }
-    }else{
+    }
+    
+    if(user.group == 'empty' || user.group == 'zero'){
       obj = {
         betAmount:user.bet,
         betType:con.dataroulette.data.betTypes.find(e=>e.name==game.betTypes[user.group]).id,
         number: parseInt(user.choice)
       }
     }
+
+    // console.log(user.group)
+    // console.log(game.betTypes[user.group])
+    // console.log(obj.betType)
+    console.log(obj)
+    // console.log(con.dataroulette.data.betTypes.find(e=>game.betTypes[user.group]))
+    // console.log(con.dataroulette.data.betTypes.find(e=>e.name==game.betTypes[user.group]).id)
+
+    // return false
 
     fetch(url_jogar,{
       method:'POST',
@@ -159,6 +170,16 @@ class Connection{
     }).then(e=>{ 
       return e.json() 
     }).then(e=>{ 
+
+      // console.log("->")
+      // console.log(e)
+      // console.log(e.status)
+
+      console.log(e)
+
+      // console.log('->')
+      // console.log(e)
+      // console.log(obj)
 
       let list_num = 0 
       let list_num_u = 0 

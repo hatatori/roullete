@@ -77,8 +77,11 @@ class Render{
             return str.split('').reverse().join('')
         }
         
+        console.log(num)
         let n = num
         n = n.toString()
+
+
         let n1 = n.split(".")[0]
         let n2 = n.split(".")[1]
         
@@ -131,7 +134,9 @@ class Render{
         Roullete.choice(n)
         Roullete.value = n
 
-        setTimeout(()=>{ this.historicAdd(n) },5000)
+        setTimeout(()=>{ 
+            this.historicAdd(n) 
+        },5000)
 
         setTimeout(()=>{
             // this.hideRoullete()
@@ -206,12 +211,16 @@ class Render{
         
         roullete_group.classList.add('zoom-out-fade-in')
         roullete_group.classList.remove('zoom-in-fade-out')
+
+        render.btnplayactive = true
     }
 
     hideRoullete(){
         // roullete_group.classList.remove('none')
         roullete_group.classList.remove('zoom-out-fade-in')
         roullete_group.classList.add('zoom-in-fade-out')
+
+        render.btnplayactive = true
     }
 
     coinAdd(value){
@@ -271,9 +280,16 @@ class Render{
 
         this.coinsAdded.push(coins_left.lastChild)
 
+        user.setMaxBet(user.maxBet-user.bet)
+        render.btnplayactive = true
+
     }
 
     coinRemoveLast(){
+
+        
+        user.setMaxBet(user.maxBet+user.bet)
+        render.btnplayactive = true
 
         if(this.coinsAdded.length == 0)
             return false

@@ -21,6 +21,8 @@ let Ball = {
 
     spin(){
 
+        // this.requestAnimationFrame(this.spin)
+
         if(this.r < 1.6){
             this.r += 0.001
         }else{
@@ -172,6 +174,8 @@ let Audios = {
         audio.play()
     }
 }
+
+
 
 // Ball.go()
 // render.play(5)

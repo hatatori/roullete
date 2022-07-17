@@ -51,7 +51,9 @@ class Connection{
     
     this.historicRoulette()
     
-    div_t1.innerHTML = "Limite diário: R$"+this.dataroulette.data.dailyLimit
+    // div_t1.innerHTML = "Limite diário: R$"+this.dataroulette.data.dailyLimit
+    // div_max_day.innerHTML = "R$ 5"
+    user.setBetMax(this.dataroulette.data.dailyLimit)
     
     this.historicplayer()
 
@@ -197,6 +199,8 @@ class Connection{
 
       // console.log("cor: "+e.data.result)
       // console.log("profit: "+e.data.betProfit)
+
+      user.setBetMax(user.maxBet - user.bet)
 
       render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
 

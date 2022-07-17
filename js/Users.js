@@ -75,6 +75,12 @@ class User extends Connection{
 
     setBetMax(maxBet){
         this.maxBet = maxBet
+        this.refresh()
+    }
+
+    setMaxBet(maxBet){
+        this.maxBet = maxBet
+        this.refresh()
     }
 
     get group(){
@@ -95,6 +101,8 @@ class User extends Connection{
     refresh(){
         div_balance.innerHTML = this.toDollar(this.balance)
         div_bet.innerHTML    = this.toDollar(this.bet)
+        div_max_day.innerHTML = user.getBetMax()
+
         div_chosen.innerHTML = this.choice
         if(this.choice == 'to18') div_chosen.innerHTML = '1to18';
         if(this.choice == 'to36') div_chosen.innerHTML = '1to36';

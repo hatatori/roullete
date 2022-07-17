@@ -50,6 +50,8 @@ class Render{
         audio.play()
     }
 
+    
+
     rotateRandomPosition(){
         let r = parseInt(Math.random() * 360)
         div_roullete.style.translate = "0.5s"

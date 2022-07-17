@@ -98,10 +98,30 @@ class User extends Connection{
 
     }
 
+    toMoney(num){
+
+        function reverse(str){
+            return str.split('').reverse().join('')
+        }
+        
+        let n = num
+        n = n.toString()
+        let n1 = n.split(".")[0]
+        let n2 = n.split(".")[1]
+        
+        n1 = reverse(n1)
+        n1 = n1.match(/...|..|./g).reverse().join('.')
+        n1 = n1.split('.').map(e=>reverse(e)).join('.')
+        
+        let n3 = (n2 == undefined) ? n1+",00" : n1+","+n2
+        
+        return n3
+    }
+
     refresh(){
         div_balance.innerHTML = this.toDollar(this.balance)
         div_bet.innerHTML    = this.toDollar(this.bet)
-        div_max_day.innerHTML = user.getBetMax()
+        div_max_day.innerHTML = user.toMoney(user.getBetMax())
 
         div_chosen.innerHTML = this.choice
         if(this.choice == 'to18') div_chosen.innerHTML = '1to18';

@@ -119,9 +119,9 @@ class User extends Connection{
     }
 
     refresh(){
-        div_balance.innerHTML = this.toDollar(this.balance)
-        div_bet.innerHTML    = this.toDollar(this.bet)
-        div_max_day.innerHTML = user.toMoney(user.getBetMax())
+        div_balance.innerHTML = "R$ "+this.toMoney(this.balance)
+        div_bet.innerHTML    = "R$ "+this.toMoney(this.bet)
+        div_max_day.innerHTML = "R$ "+user.toMoney(user.getBetMax())
 
         div_chosen.innerHTML = this.choice
         if(this.choice == 'to18') div_chosen.innerHTML = '1to18';

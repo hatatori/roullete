@@ -71,6 +71,26 @@ class Render{
         all.map(e=>e.style.removeProperty('opacity'))
     }
 
+    toMoney(num){
+
+        function reverse(str){
+            return str.split('').reverse().join('')
+        }
+        
+        let n = num
+        n = n.toString()
+        let n1 = n.split(".")[0]
+        let n2 = n.split(".")[1]
+        
+        n1 = reverse(n1)
+        n1 = n1.match(/...|..|./g).reverse().join('.')
+        n1 = n1.split('.').map(e=>reverse(e)).join('.')
+        
+        let n3 = (n2 == undefined) ? n1+",00" : n1+","+n2
+        
+        return n3
+    }
+
     historicAdd(n){
         let div = document.createElement('div')
         let class_color_num = 'ball-'+game.getColorNum(n)
@@ -82,7 +102,7 @@ class Render{
     }
 
     historicplayerAdd(color, choice, value, valuerol, profit){
-        console.log("v-profit: "+profit)
+        
         let simbol = (color == 'GREEN') ? '✔️' : '❌'
         let div = document.createElement('div')
         div.className = 'item'
@@ -91,11 +111,11 @@ class Render{
                 <span class="p-win">${simbol}</span>
                 <div>
                     <div class="p-choice">${choice}</div>
-                    <div class="p-val">Valor: R$ ${value}</div>
+                    <div class="p-val">Valor: R$ ${this.toMoney(value)}</div>
                     <div class="p-rol">Resultado: ${valuerol}</div>
                 </div>
             </div>
-            <p class="p-val ${color}">R$ ${profit}</p>
+            <p class="p-val ${color}">R$ ${this.toMoney(profit)}</p>
         `
         multiple.appendChild(div)
     }
@@ -135,7 +155,7 @@ class Render{
                 // user.earn = user.balance + user.bet + user.add
                 user.setBalance(user.balance + user.bet + user.last.profit)
                 // render.message_win("Parabéns", "Você ganhou R$ "+this.toDollar(user.bet * game.porcentage[user.group]))
-                render.message_win("Parabéns", "Você ganhou "+this.toDollar(user.last.profit + user.bet))
+                render.message_win("Parabéns", "Você ganhou R$ "+this.toMoney(user.last.profit + user.bet))
                 // user.profit = user.bet * game.porcentage[user.group]
             }
 

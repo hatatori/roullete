@@ -110,7 +110,7 @@ class Connection{
   historicplayer(){
     for(let i of this.dataroulette.data.playerHistory){
       render.historicplayerAdd(i.result, i.betType.name, i.betAmount, i.rouletteNumber, i.profit)
-      console.log(i)
+      // console.log(i)
     }
       
   }
@@ -164,7 +164,7 @@ class Connection{
       let list_num_u = 0 
 
       if(e.data.result == 'RED'){
-        console.log('red')
+        // console.log('red')
 
         if(!isNaN(parseInt(user.choice)))
           list_num = Array.sub(game.choice.all,[parseInt(user.choice)]) //se for número
@@ -178,15 +178,15 @@ class Connection{
       }
 
       if(e.data.result == 'GREEN'){
-        console.log('green')
+        // console.log('green')
         if(!isNaN(parseInt(user.choice)))
           list_num_u = game.choice.all.indexOf(parseInt(user.choice))
         else
           list_num_u = game.choice[user.choice][parseInt(Math.random()*game.choice[user.choice].length-1)]
           render.play(list_num_u)
 
-        console.log(list_num)
-        console.log(list_num_u)
+        // console.log(list_num)
+        // console.log(list_num_u)
       }
 
       user.last = {

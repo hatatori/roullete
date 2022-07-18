@@ -12,8 +12,19 @@ class User extends Connection{
         this.numbersRoullete = []
         this.quantity = 5
         this.maxBet = 0
+        this.maxBetTemp = 0
         this.last_entry = 0
         this.next_entry = 0
+    }
+
+    setName(name){
+        this.name = name
+        div_historic_name.innerHTML = name
+    }
+
+    setUserName(username){
+        this.username = username
+        div_historic_user.innerHTML = username
     }
 
     reset(){
@@ -75,6 +86,11 @@ class User extends Connection{
 
     setBetMax(maxBet){
         this.maxBet = maxBet
+        this.refresh()
+    }
+
+    setBetMaxTemp(maxBetTemp){
+        this.maxBetTemp = maxBetTemp
         this.refresh()
     }
 

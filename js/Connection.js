@@ -277,7 +277,7 @@ window.addEventListener('message',e=>{
   con.connect()
 
   user.setName(e.data.user.name)
-  user.setUserName(e.data.user.username)
+  user.setUserName("login: "+e.data.user.username)
 
 })
 

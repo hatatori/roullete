@@ -41,57 +41,6 @@ class Connection{
 
   async connect(){
     
-    // autenticação
-    // if(localStorage.token == undefined){
-      // let auth = await fetch(url_antenticacao, { method:'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({"username":this.email, "password":this.password}) })
-      // let auth_obj = await auth.json()
-      // this.token = auth_obj.data.token
-      // localStorage.setItem('token', this.token)
-    // }
-
-    // localStorage.setItem('token', window.location.search.split('=')[1])
-    // this.token = localStorage.token
-
-
-    // this.token = window.location.search.split('=')[1]
-
-    // if(window.location.search[1] == 't'){
-    //   localStorage.setItem('token', window.location.search.split('=')[1])
-    //   window.location.href = window.location.origin
-    // }
-
-    // if(localStorage.token == 'undefined')
-    //   loading_div.t = localStorage.token
-
-    // if(loading_div.t){
-    //   this.token = localStorage.token
-    // }
-
-    // if(localStorage.token){
-    //   this.token = localStorage.token
-    //   loading_div.t = localStorage.token
-    // }
-
-
-    
-    if(this.token){
-      setTimeout(()=>{localStorage.removeItem('token')},100)
-    }else{
-      render.error()
-    }
-      
-
-    // this.token = localStorage.token
-    // localStorage.removeItem('token')
-
-    
-
-
-    
-
-    // this.token = window.location.search.split('=')[1]
-
-
     // dados da roleta
     let roulette = await fetch(this.url_abrir_roleta, {method: 'POST',headers: {'Content-Type':'application/json','Authorization': "Bearer "+this.token,'company-id': this.companyId}})
     let roulette_json = await roulette.json()
@@ -111,12 +60,13 @@ class Connection{
 
     user.setBalance(con.dataroulette.data.balance)
     user.setBetMax(con.dataroulette.data.dailyLimit)
+    user.setBetMaxTemp(con.dataroulette.data.dailyLimit)
     
     this.historicRoulette()
     
     // div_t1.innerHTML = "Limite diário: R$"+this.dataroulette.data.dailyLimit
     // div_max_day.innerHTML = "R$ 5"
-    user.setBetMax(this.dataroulette.data.dailyLimit)
+    // user.setBetMax(this.dataroulette.data.dailyLimit)
     
     this.historicplayer()
 
@@ -284,7 +234,7 @@ class Connection{
       // console.log("cor: "+e.data.result)
       // console.log("profit: "+e.data.betProfit)
 
-      user.setBetMax(user.maxBet - user.bet)
+      // user.setBetMax(user.maxBet - user.bet)
 
       render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.last.profit)
 
@@ -308,6 +258,11 @@ class Connection{
       // })
 
       button_play.removeAttribute('style')
+      
+      // user.setBetMaxTemp()
+      // user.setBetMaxTemp(con.dataroulette.data.dailyLimit)
+      // this.refresh()
+      user.setBetMaxTemp(user.maxBet)
 
     })
   }
@@ -316,10 +271,14 @@ class Connection{
 
 let con
 window.addEventListener('message',e=>{
-  con = new Connection(e.data.token, e.data.apiBaseUrl)
+  con = new Connection(e.data.token, e.data.apiBaseUrl, e.data.user.name, e.data.user.username)
   // con.token = e.data.token
   // con.apiBaseUrl = e.data.apiBaseUrl
   con.connect()
+
+  user.setName(e.data.user.name)
+  user.setUserName(e.data.user.username)
+
 })
 
 

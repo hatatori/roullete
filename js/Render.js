@@ -176,6 +176,7 @@ class Render{
             // user.profit = user.profit.toFixed(2).replace('.',',')
             // render.historicplayerAdd(user.last.cor, user.last.group, user.last.valor, user.last.rou, user.profit)
             
+            // user.setBetMaxTemp(user.maxBet)
             user.setBet(0)
             
             button_play.style.pointerEvents = 'auto'
@@ -235,7 +236,7 @@ class Render{
     coinAdd(value){
 
         if( user.balance - value < 0 ){
-            this.message_information("Caixa insuficiente")
+            this.message_information("Saldo insuficiente")
             return false
         }
 
@@ -244,6 +245,7 @@ class Render{
         //     return false
         // }
 
+        // user.setBet(user.bet + value)
         user.setBet(user.bet + value)
         user.setBalance(user.balance - value)
 
@@ -289,7 +291,8 @@ class Render{
 
         this.coinsAdded.push(coins_left.lastChild)
 
-        user.setMaxBet(user.maxBet-user.bet)
+        user.setMaxBet(user.maxBetTemp - user.bet)
+
         render.btnplayactive = true
 
     }
@@ -297,7 +300,9 @@ class Render{
     coinRemoveLast(){
 
         
-        user.setMaxBet(user.maxBet+user.bet)
+        // user.setMaxBet(user.maxBet+user.bet)
+        
+
         render.btnplayactive = true
 
         if(this.coinsAdded.length == 0)
@@ -314,6 +319,8 @@ class Render{
             Audios.select1()
             this.coinsAdded.pop()
         }
+
+        user.setMaxBet(user.maxBetTemp-user.bet)
     }
 
     coinRemoveAll(){

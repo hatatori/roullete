@@ -1,8 +1,10 @@
-const url_antenticacao = 'https://homolog-api.livingsports.net/v1/auth/login/customer'
-const url_abrir_roleta = 'https://homolog-api.livingsports.net/v1/roulette/open'
-const url_jogar = 'https://homolog-api.livingsports.net/v1/roulette/play'
-const url_registrar = ' https://homolog-api.livingsports.net/v1/roulette/{sessionID}/register-number'
-const url_historico_roleta = 'https://homolog-api.livingsports.net/v1/roulette/history'
+const apiBaseUrl = 'https://homolog-api.livingsports.net'
+
+const url_antenticacao = apiBaseUrl+'/v1/auth/login/customer'
+const url_abrir_roleta = apiBaseUrl+'/v1/roulette/open'
+const url_jogar = apiBaseUrl+'/v1/roulette/play'
+const url_registrar = apiBaseUrl+'/v1/roulette/{sessionID}/register-number'
+const url_historico_roleta = apiBaseUrl+'/v1/roulette/history'
 
 class Connection{
 
@@ -15,6 +17,14 @@ class Connection{
     this.email = "testeroleta"
     this.password = "123456"
 
+    // let con = new Connection()
+    this.token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6IjNiOTFhMjczYjZhMGY4ZCJ9.eyJzdWIiOiI5NjY5OTJhMi1iYzJjLTQ2YjctOTBmNC04NDUxYzBlNTg4YWQiLCJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE2NTgwOTUwNTUsImV4cCI6MTY2MDY4NzA1NSwianRpIjoiMjBmMzQ2NWU0OGU3MThkIiwiaWQiOiI5NjY5OTJhMi1iYzJjLTQ2YjctOTBmNC04NDUxYzBlNTg4YWQiLCJuYW1lIjoidGVzdGVyb2xldGEiLCJ1c2VybmFtZSI6InRlc3Rlcm9sZXRhIiwiZ3JvdXAiOiJDVVNUT01FUiIsImNyZWF0ZWRBdCI6IjIwMjItMDctMTdUMTg6NTc6MzUtMDM6MDAiLCJpbmRpY2F0aW9uQ29kZSI6InRlc3Rlcm9sZXRhIiwiaXNBY3RpdmUiOmZhbHNlLCJpbXBlcnNvbmF0ZSI6ZmFsc2UsImNvbXBhbnkiOnsiaWQiOiIxNmU2ODNhMi0zMzUwLTRhNmYtYWJjZC1lNTAzOTRhMTk3OWMiLCJuYW1lIjoiTGl2aW5nIFNwb3J0cyIsIm1pbmltdW1XaXRoZHJhd2FsQW1vdW50IjoxNTAsIndpdGhkcmF3YWxJbnRlcnZhbERheXMiOjAsIndpdGhkcmF3YWxEYXlzIjpbIjkiLCIxMCIsIjExIiwiMTUiLCIyMyIsIjI1IiwiMzAiXSwicGl4Ijp7ImtleSI6IjQ2NjI1OTI4MDAwMTYyIiwiaW52b2ljZUxpZmV0aW1lIjoxNDQwLCJpZCI6IiJ9LCJiaXRjb2luIjp7IndhbGxldCI6ImJjMXF5azBnODI5amU2cGYzM3hoanp0OWRkNWVjcnphdXF1OWs2eDg2OSIsImludm9pY2VMaWZldGltZSI6MzAsImlkIjoiIn0sInVzZHQiOnsid2FsbGV0IjoiVFdSNTc4Yk5vRTU5S3Y1ZFdQSjVzYzllV0gyZnpmSzl2QiIsImludm9pY2VMaWZldGltZSI6MzAsImlkIjoiIn0sIndoYXRzYXBwIjp7InN1cHBvcnRQaG9uZSI6Iis1NTExOTM0NjQ1MDUxIiwic3VwcG9ydFRleHQiOiJPbFx1MDBlMSwgdm9jXHUwMGVhIHBvZGVyaWEgdGlyYXIgdW1hIGRcdTAwZmF2aWRhPyIsInN1cHBvcnRHcm91cFVybCI6IiIsImlkIjoiIn19fQ.RJDeYdke3cPWKlFuUovnNeQfvbVXCCE6wngzh_P4QyE'
+    // con.connect()
+
+  }
+
+  setToken(token){
+    this.token = token
   }
 
   async connect(){
@@ -23,7 +33,7 @@ class Connection{
     // if(localStorage.token == undefined){
       let auth = await fetch(url_antenticacao, { method:'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({"username":this.email, "password":this.password}) })
       let auth_obj = await auth.json()
-      // this.token = auth_obj.data.token
+      this.token = auth_obj.data.token
       // localStorage.setItem('token', this.token)
     // }
 
@@ -33,13 +43,24 @@ class Connection{
 
     // this.token = window.location.search.split('=')[1]
 
-    if(window.location.search[1] == 't'){
-      localStorage.setItem('token', window.location.search.split('=')[1])
-      window.location.href = window.location.origin
-    }
+    // if(window.location.search[1] == 't'){
+    //   localStorage.setItem('token', window.location.search.split('=')[1])
+    //   window.location.href = window.location.origin
+    // }
 
-    if(localStorage.token)
-      this.token = localStorage.token
+    // if(localStorage.token == 'undefined')
+    //   loading_div.t = localStorage.token
+
+    // if(loading_div.t){
+    //   this.token = localStorage.token
+    // }
+
+    // if(localStorage.token){
+    //   this.token = localStorage.token
+    //   loading_div.t = localStorage.token
+    // }
+
+
     
     if(this.token){
       setTimeout(()=>{localStorage.removeItem('token')},100)
@@ -120,7 +141,7 @@ class Connection{
     //   body: JSON.stringify({'number':num})
     // })
 
-    fetch(`https://homolog-api.livingsports.net/v1/roulette/${id}/register-number`,{
+    fetch(`${apiBaseUrl}/v1/roulette/${id}/register-number`,{
         method:'POST',
         headers:{
           'company-id': this.companyId,
@@ -280,8 +301,15 @@ class Connection{
   }
 }
 
+
 let con = new Connection()
-con.connect()
+
+window.addEventListener('message',e=>{
+  con.token = e.data.token
+  con.apiBaseUrl = e.data.apiBaseUrl
+  con.connect()
+})
+
 
 // con.bet(50,'3d42ee1b-757e-41ca-a8a1-45bcc3ac2ef6',12)
 // con.register(20)
